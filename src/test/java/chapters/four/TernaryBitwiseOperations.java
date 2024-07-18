@@ -9,9 +9,22 @@ public class TernaryBitwiseOperations {
     public static final int HEX_HIGH = 0xaaaaaaaa;
 
     public static void main(String[] args) {
-        print(String.format("%s in binary — %s", LOW, Integer.toBinaryString(LOW)));
-        print(String.format("%s in binary — %s", HEX_LOW, Integer.toBinaryString(HEX_LOW)));
-        print(String.format("%s in binary — %s", HIGH, Integer.toBinaryString(HIGH)));
-        print(String.format("%s in binary — %s", HEX_HIGH, Integer.toBinaryString(HEX_HIGH)));
+        print(String.format("%s | %s = %s in binary", HEX_LOW, HEX_HIGH, printResult(HEX_LOW | HEX_HIGH)));
+        print(String.format("%s & %s = %s in binary", HEX_LOW, HEX_HIGH, printResult(HEX_LOW & HEX_HIGH)));
+        print(String.format("%s ^ %s = %s in binary", HEX_LOW, HEX_HIGH, printResult(HEX_LOW ^ HEX_HIGH)));
+        print(String.format("~ %s = %s in binary", HEX_LOW, printResult(~HEX_LOW)));
+        print(String.format("~ %s = %s in binary", HEX_HIGH, printResult(~HEX_HIGH)));
+    }
+
+    private static String printResult(int i) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int j = 31; j >= 0; j--){
+            int i1 = i << j;
+            int i2 = i1 >>> 31;
+            char ch = i2 == 1 ? '1' : '0';
+            stringBuilder.append(ch);
+        }
+
+        return stringBuilder.reverse().toString();
     }
 }
