@@ -1,4 +1,4 @@
-package chapters.five.overloading.chapters.five.overloading;
+package chapters.five.overloading;
 
 import static net.midview.Print.print;
 

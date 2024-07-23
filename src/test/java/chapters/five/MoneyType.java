@@ -1,4 +1,4 @@
-package chapters.five.overloading.chapters.five;
+package chapters.five;
 
 public enum MoneyType {
     METAL,

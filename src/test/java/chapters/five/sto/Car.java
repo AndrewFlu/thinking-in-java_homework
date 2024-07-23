@@ -1,4 +1,4 @@
-package chapters.five.overloading.chapters.five.sto;
+package chapters.five.sto;
 
 public class Car {
     private String brand;

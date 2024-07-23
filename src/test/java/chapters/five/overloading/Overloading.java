@@ -1,4 +1,4 @@
-package chapters.five.overloading.chapters.five.overloading;
+package chapters.five.overloading;
 
 /**
  * Класс для запуска программы высаживания деревьев

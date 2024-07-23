@@ -1,4 +1,4 @@
-package chapters.five.overloading.chapters.five;
+package chapters.five;
 
 public class FinalizeExample {
     boolean isReadyToNextGuest;

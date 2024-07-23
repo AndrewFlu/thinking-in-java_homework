@@ -1,6 +1,4 @@
-package chapters.five.overloading.chapters.five;
-
-import chapters.two.incrementable.StaticTest;
+package chapters.five;
 
 import static net.midview.Print.print;
 

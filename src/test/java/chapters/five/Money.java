@@ -1,6 +1,6 @@
-package chapters.five.overloading.chapters.five;
+package chapters.five;
 
-import static chapters.five.overloading.chapters.five.MoneyType.*;
+import static chapters.five.MoneyType.*;
 import static net.midview.Print.print;
 
 public class Money {
