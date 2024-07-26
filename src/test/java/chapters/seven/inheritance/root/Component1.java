@@ -1,7 +1,10 @@
 package chapters.seven.inheritance.root;
 
 public class Component1 {
-    public Component1() {
-        System.out.println("Вызван конструктор Component1");
+    String label;
+
+    public Component1(String label) {
+        this.label = label;
+        System.out.println("Вызван конструктор Component1(String label), label = " + label);
     }
 }

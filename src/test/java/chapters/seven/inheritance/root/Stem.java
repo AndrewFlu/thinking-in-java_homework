@@ -6,12 +6,13 @@ public class Stem extends Root {
     Component3 component3;
 
     {
-        component1 = new Component1();
-        component2 = new Component2();
-        component3 = new Component3();
+        component1 = new Component1("Stem 1");
+        component2 = new Component2("Stem 2");
+        component3 = new Component3("Stem 3");
     }
 
-    public Stem() {
+    public Stem(int stemId) {
+        super(stemId);
         System.out.println("Вызван конструктор Stem");
     }
 }
