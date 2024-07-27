@@ -21,5 +21,7 @@ public class Car {
         car.leftDoor.close();
         car.engine.start();
         car.leftDoor.window.rollDown();
+        car.engine.stop();
+        car.engine.service();
     }
 }

@@ -9,4 +9,8 @@ public class Engine {
     public void stop() {
         System.out.println("Двигатель заглушен");
     }
+
+    public void service() {
+        System.out.println("Автомобиль обслужен");
+    }
 }
