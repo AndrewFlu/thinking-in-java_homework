@@ -1,7 +1,7 @@
 package chapters.seven.inheritance.root;
 
 public class Component1 {
-    String label;
+    final String label;
 
     public Component1(String label) {
         this.label = label;

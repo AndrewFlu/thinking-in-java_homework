@@ -16,4 +16,8 @@ public class Root {
         this.id = id;
         System.out.println("Вызван конструктор Root(int id), id = " + id);
     }
+
+    void dispose() {
+        System.out.println("Вырываем корень");
+    }
 }

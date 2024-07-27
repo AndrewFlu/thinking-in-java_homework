@@ -15,4 +15,9 @@ public class Stem extends Root {
         super(stemId);
         System.out.println("Вызван конструктор Stem");
     }
+
+    void dispose() {
+        System.out.println("Срубаем стебель");
+        super.dispose();
+    }
 }
