@@ -12,4 +12,8 @@ public class Printer {
     void print(String str) {
         System.out.println("print(String str)");
     }
+
+    protected final void printPdf() {
+        System.out.println("Печать pdf-файла определена в Printer и не может быть изменена");
+    }
 }
