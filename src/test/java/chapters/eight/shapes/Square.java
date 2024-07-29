@@ -10,4 +10,9 @@ public class Square extends Shape{
     public void erase(){
         System.out.println("Square.erase()");
     }
+
+    @Override
+    public void printBaseInfo() {
+        System.out.println("Я реализация метода printBaseInfo() класса Square");
+    }
 }

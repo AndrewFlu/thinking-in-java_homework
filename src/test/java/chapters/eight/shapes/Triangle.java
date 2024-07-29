@@ -11,4 +11,8 @@ public class Triangle extends Shape {
         System.out.println("Triangle.erase()");
     }
 
+    @Override
+    public void printBaseInfo() {
+        System.out.println("Я реализация метода printBaseInfo() класса Triangle");
+    }
 }

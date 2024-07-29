@@ -12,6 +12,8 @@ public class ShapesTestDrive {
         // полиморфные вызовы draw()
         for (Shape shape : randomShapes) {
             shape.draw();
+            shape.printInfo();
+            shape.printBaseInfo();
         }
     }
 }
