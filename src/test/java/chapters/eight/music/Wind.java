@@ -7,11 +7,6 @@ public class Wind extends Instrument {
     }
 
     @Override
-    String what() {
-        return "Wind";
-    }
-
-    @Override
     void adjust() {
         System.out.println("Adjusting Wind");
     }

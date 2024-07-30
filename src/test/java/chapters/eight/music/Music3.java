@@ -10,6 +10,14 @@ public class Music3 {
                 new WoodWind()
         };
         tuneAll(orchestra);
+        System.out.println("");
+        printAll(orchestra);
+    }
+
+    private static void printAll(Instrument[] orchestra) {
+        for (Instrument i : orchestra) {
+            System.out.println(i.what());
+        }
     }
 
     private static void tuneAll(Instrument[] orchestra) {

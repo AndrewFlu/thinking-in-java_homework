@@ -7,11 +7,6 @@ public class Stringed extends Instrument {
     }
 
     @Override
-    String what() {
-        return "Stringer";
-    }
-
-    @Override
     void adjust() {
         System.out.println("Adjusting Stringer");
     }

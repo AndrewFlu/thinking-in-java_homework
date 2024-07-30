@@ -7,11 +7,6 @@ public class Percussion extends Instrument {
     }
 
     @Override
-    String what() {
-        return "Percussion";
-    }
-
-    @Override
     void adjust() {
         System.out.println("Adjusting Percussion");
     }

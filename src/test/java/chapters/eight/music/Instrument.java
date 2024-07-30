@@ -6,8 +6,8 @@ public class Instrument {
         System.out.println("Instrument.play() " + n);
     }
 
-    String what() {
-        return "Instrument";
+    final String what() {
+        return toString();
     }
 
     void adjust() {
