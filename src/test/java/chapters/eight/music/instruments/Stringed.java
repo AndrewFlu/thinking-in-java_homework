@@ -1,8 +1,10 @@
-package chapters.eight.music;
+package chapters.eight.music.instruments;
+
+import chapters.eight.music.Note;
 
 public class Stringed extends Instrument {
     @Override
-    void play(Note n) {
+    public void play(Note n) {
         System.out.println("Stringer.play() " + n);
     }
 

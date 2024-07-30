@@ -1,12 +1,14 @@
-package chapters.eight.music;
+package chapters.eight.music.instruments;
+
+import chapters.eight.music.Note;
 
 public class Instrument {
 
-    void play(Note n) {
+    public void play(Note n) {
         System.out.println("Instrument.play() " + n);
     }
 
-    final String what() {
+    public final String what() {
         return toString();
     }
 

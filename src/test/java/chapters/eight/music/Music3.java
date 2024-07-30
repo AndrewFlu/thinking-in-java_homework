@@ -1,15 +1,14 @@
 package chapters.eight.music;
 
+import chapters.eight.music.instruments.Instrument;
+
 public class Music3 {
     public static void main(String[] args) {
-        Instrument[] orchestra = {
-                new Wind(),
-                new Percussion(),
-                new Brass(),
-                new Stringed(),
-                new WoodWind(),
-                new Flute(),
-        };
+        Instrument[] orchestra = new Instrument[10];
+        for (int i = 0; i < orchestra.length; i++) {
+            orchestra[i] = InstrumentGenerator.next();
+        }
+
         tuneAll(orchestra);
         System.out.println("");
         printAll(orchestra);
