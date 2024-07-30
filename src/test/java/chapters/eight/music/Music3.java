@@ -7,7 +7,8 @@ public class Music3 {
                 new Percussion(),
                 new Brass(),
                 new Stringed(),
-                new WoodWind()
+                new WoodWind(),
+                new Flute(),
         };
         tuneAll(orchestra);
         System.out.println("");
