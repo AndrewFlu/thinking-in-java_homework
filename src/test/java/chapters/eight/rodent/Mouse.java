@@ -2,7 +2,8 @@ package chapters.eight.rodent;
 
 public class Mouse extends Rodent {
 
-    public Mouse() {
+    public Mouse(Pool pool) {
+        super(pool);
         System.out.println("Mouse()");
     }
 

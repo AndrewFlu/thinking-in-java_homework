@@ -1,9 +1,12 @@
 package chapters.eight.rodent;
 
 public class Rodent {
+    protected Pool pool;
 
-    public Rodent() {
+    public Rodent(Pool pool) {
         System.out.println("Rodent()");
+        this.pool = pool;
+        this.pool.addReferenceCount();
     }
 
     protected void run() {
@@ -18,6 +21,9 @@ public class Rodent {
         return getClass().getSimpleName();
     }
 
+    protected void dispose() {
+        this.pool.dispose();
+    }
     public String toString() {
         return getClass().getSimpleName();
     }

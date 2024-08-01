@@ -14,5 +14,15 @@ public class RodentTestDrive {
             System.out.println(r.getName());
             r.eat();
         }
+
+        Pool pool = new Pool();
+        Rodent[] poolRodents = {
+                new Hamster(pool),
+                new Mouse(pool),
+        };
+
+        for (Rodent r : poolRodents) {
+            r.dispose();
+        }
     }
 }
