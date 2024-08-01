@@ -12,5 +12,11 @@ public class ReferenceCountingTestDrive {
         for (Composing c : composings) {
             c.dispose();
         }
+        System.gc();
+        System.runFinalization();
+
+        new Composing(new Shared());
+        System.gc();
+        System.runFinalization();
     }
 }

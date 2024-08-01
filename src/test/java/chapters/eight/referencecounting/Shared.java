@@ -23,4 +23,13 @@ public class Shared {
     public String toString() {
         return "Shared " + id;
     }
+
+    @Override
+    public void finalize(){
+        if (referenceCount != 0) {
+            System.out.println("ERROR: объект Shared имеет активные ссылки");
+        } else {
+            System.out.println("Финализация успешно выполнена");
+        }
+    }
 }
