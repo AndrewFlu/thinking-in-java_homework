@@ -12,4 +12,8 @@ public class Unicycle extends Cycle {
     public int wheels() {
         return wheels;
     }
+
+    public void balance() {
+        System.out.println("Ловим баланс на моноцикле");
+    }
 }
