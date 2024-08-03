@@ -4,7 +4,7 @@ import chapters.eight.music.Note;
 
 public class Music5 {
     public static void main(String[] args) {
-        Instrument[] orchestra = {
+        Playable[] orchestra = {
                 new Brass(),
                 new Percussion(),
                 new Stringed(),
@@ -15,13 +15,13 @@ public class Music5 {
         tuneAll(orchestra);
     }
 
-    private static void tuneAll(Instrument[] instruments) {
-        for (Instrument i : instruments) {
+    private static void tuneAll(Playable[] instruments) {
+        for (Playable i : instruments) {
             tune(i);
         }
     }
 
-    private static void tune(Instrument instrument) {
+    private static void tune(Playable instrument) {
         instrument.play(Note.C_SHARP);
     }
 }
