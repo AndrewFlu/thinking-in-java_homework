@@ -1,5 +1,4 @@
 package chapters.nine.interfaceexamples.diamondproblem.abcd;
 
-public interface IB extends IA {
-
+public interface ID extends IB, IC {
 }
