@@ -1,11 +1,7 @@
 package chapters.nine.interfaceexamples.processors;
 
-public class Processor {
-    public String name() {
-        return getClass().getSimpleName();
-    }
+public interface Processor {
+    String name();
 
-    Object process(Object input) {
-        return input;
-    }
+    Object process(Object input);
 }

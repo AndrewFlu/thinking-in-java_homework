@@ -2,9 +2,14 @@ package chapters.nine.interfaceexamples.processors;
 
 import java.util.Arrays;
 
-public class Splitter extends Processor {
+public class Splitter implements Processor {
     @Override
-    Object process(Object input) {
+    public String name() {
+        return getClass().getSimpleName();
+    }
+
+    @Override
+    public Object process(Object input) {
         return Arrays.toString(((String)input).split(" "));
     }
 }

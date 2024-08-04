@@ -1,8 +1,13 @@
 package chapters.nine.interfaceexamples.processors;
 
-public class Downcase extends Processor {
+public class Downcase implements Processor {
     @Override
-    Object process(Object input) {
+    public String name() {
+        return getClass().getSimpleName();
+    }
+
+    @Override
+    public Object process(Object input) {
         return ((String)input).toLowerCase();
     }
 }
