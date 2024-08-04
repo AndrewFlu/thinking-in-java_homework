@@ -6,7 +6,12 @@ public class Adventure {
         doSwim(hero);
         doFly(hero);
         doFight(hero);
+        doClimb(hero);
         doCharacterFight(hero);
+    }
+
+    private static void doClimb(CanClimb x) {
+        x.climb();
     }
 
     private static void doCharacterFight(ActionCharacter y) {
