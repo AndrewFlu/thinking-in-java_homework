@@ -8,6 +8,8 @@ public class CarTestDrive {
         printEngineType(audiAllRoad);
         printColor(audiAllRoad);
         printWheelDriveType(audiAllRoad);
+
+        audiAllRoad.printCorporationInfo();
     }
 
     private static void printWheelDriveType(IDrive drive) {
