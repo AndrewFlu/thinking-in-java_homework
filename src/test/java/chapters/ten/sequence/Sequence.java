@@ -18,8 +18,16 @@ public class Sequence {
         return new SequenceSelector();
     }
 
+    public Sequence sequenceSelector() {
+        return this.new SequenceSelector().getSequence();
+    }
+
     private class SequenceSelector implements Selector {
         private int i = 0;
+
+        public Sequence getSequence() {
+            return Sequence.this; // возвращает ссылку на внешний класс
+        }
 
         @Override
         public boolean end() {

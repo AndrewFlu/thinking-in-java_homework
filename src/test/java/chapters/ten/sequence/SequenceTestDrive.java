@@ -25,5 +25,8 @@ public class SequenceTestDrive {
             brandSelector.next();
         }
 
+        Sequence sequence = brandSequence.sequenceSelector();
+        String current = (String) sequence.sequenceSelector().selector().current();
+        System.out.println(current);
     }
 }
