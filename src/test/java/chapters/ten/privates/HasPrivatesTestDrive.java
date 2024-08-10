@@ -8,5 +8,7 @@ public class HasPrivatesTestDrive {
         privates.useInner();
 
         System.out.println(privates.getName());
+
+        privates.printInnerInfo();
     }
 }

@@ -16,7 +16,17 @@ public class HasPrivates {
         return name;
     }
 
+    public void printInnerInfo() {
+        System.out.println(this.new HasPrivateInner().getInnerInfo());
+    }
+
     class HasPrivateInner {
+        private final String innerInfo = "Inner class info";
+
+        private String getInnerInfo() {
+            return innerInfo;
+        }
+
         void changeOuterPrivateField() {
             name = "Поле внешнего класса изменено";
             System.out.println(getInfo());
