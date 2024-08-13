@@ -1,4 +1,4 @@
-package chapters.ten.locals;
+package chapters.ten.locals.sum;
 
 public class Mathematical {
     ISum sum() {
