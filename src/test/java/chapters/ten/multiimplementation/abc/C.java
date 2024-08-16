@@ -1,4 +1,4 @@
-package chapters.ten.multiimplementation;
+package chapters.ten.multiimplementation.abc;
 
 public class C extends A {
     B makeB() {
