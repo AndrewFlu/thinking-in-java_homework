@@ -6,15 +6,17 @@ package chapters.ten.greenhouse;
  */
 public class GreenHouseTestDrive {
     public static void main(String[] args) {
-        GreenHouseControls ghController = new GreenHouseControls();
+        HumidityControls ghController = new HumidityControls();
 
         ghController.addEvent(ghController.new Bell(900));
 
         Event[] eventList = {
                 ghController.new ThermostatNight(0),
+                ghController.new HumidityOn(300),
                 ghController.new LightOn(200),
                 ghController.new AirConditioningOn(250),
                 ghController.new LightOff(400),
+                ghController.new HumidityOff(500),
                 ghController.new WaterOn(600),
                 ghController.new WaterOff(800),
                 ghController.new ThermostatDay(1400),
