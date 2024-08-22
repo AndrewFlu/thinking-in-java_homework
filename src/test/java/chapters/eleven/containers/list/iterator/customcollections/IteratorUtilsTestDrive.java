@@ -8,7 +8,7 @@ import java.util.*;
 
 public class IteratorUtilsTestDrive {
     public static void main(String[] args) {
-        Car[] cars = {new Bmw(), new Audi(), new Bmw()};
+        Car[] cars = {new Mersedes(), new Bmw(), new Audi(), new Bmw()};
         List<Car> carList = Arrays.asList(cars);
         Collection<Car> carsArrayList = new ArrayList<>(carList);
         Collection<Car> carsLinkedList = new LinkedList<>(carList);

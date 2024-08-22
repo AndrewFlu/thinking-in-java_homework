@@ -28,11 +28,6 @@ public class Car implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        if (brand.length() > o.toString().length()) {
-            return 1;
-        } else if (brand.equals(o.toString())) {
-            return 0;
-        }
-        return -1;
+        return brand.compareTo(o.toString());
     }
 }
