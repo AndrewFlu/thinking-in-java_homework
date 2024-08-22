@@ -1,6 +1,7 @@
 package chapters.eleven.containers.list.iterator.rodent;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class RodentTestDrive {
@@ -11,9 +12,9 @@ public class RodentTestDrive {
         }
         System.out.println(rodents);
 
-        for (Rodent r : rodents) {
-            System.out.println(r.getName());
-            r.eat();
+        for (Rodent rodent : rodents) {
+            System.out.println(rodent.getName());
+            rodent.run();
         }
     }
 }
