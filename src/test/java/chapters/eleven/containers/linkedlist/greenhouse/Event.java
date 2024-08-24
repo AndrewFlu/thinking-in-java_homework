@@ -1,0 +1,25 @@
+package chapters.eleven.containers.linkedlist.greenhouse;
+
+/**
+ * Общие для всякого управляющего события методы
+ */
+abstract class Event {
+    private long eventTime;
+    protected final long delayTime;
+
+    public Event(long delayTime) {
+        this.delayTime = delayTime;
+        start();
+    }
+
+    public abstract void action();
+
+    // с возможностью перезапуска
+    public void start() {
+        eventTime = System.nanoTime() + delayTime;
+    }
+
+    public boolean ready() {
+        return System.nanoTime() >= eventTime;
+    }
+}
