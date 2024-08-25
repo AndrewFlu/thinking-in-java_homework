@@ -17,4 +17,18 @@ public class MapUtils {
                         LinkedHashMap::new
                 ));
     }
+
+    public static LinkedHashMap<String, String> getSortedByKeysMap(LinkedHashMap<String, String> map) {
+        return map.entrySet()
+                .stream()
+                .sorted(Map.Entry.<String, String>comparingByKey())
+
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue,
+                        LinkedHashMap::new
+                ));
+    }
+
 }
