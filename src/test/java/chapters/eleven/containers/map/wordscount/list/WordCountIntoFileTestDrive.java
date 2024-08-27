@@ -9,6 +9,12 @@ import java.util.Map;
 public class WordCountIntoFileTestDrive {
     public static void main(String[] args) {
         TextFile file = new TextFile("src/test/java/chapters/eleven/containers/map/wordscount/UniqueWordsAlphabetic.java", "\\W+");
+        Map<String, ArrayList<Integer>> wordFrequency = getWordFrequency(file);
+
+        printFrequency(wordFrequency);
+    }
+
+    public static Map<String, ArrayList<Integer>> getWordFrequency(TextFile file) {
         Map<String, ArrayList<Integer>> wordFrequency = new HashMap<>();
 
         for (int i = 0; i < file.size(); i++) {
@@ -22,8 +28,7 @@ public class WordCountIntoFileTestDrive {
                 wordFrequency.put(currentKey, list);
             }
         }
-
-        printFrequency(wordFrequency);
+        return wordFrequency;
     }
 
     private static void printFrequency(Map<String, ArrayList<Integer>> wordFrequency) {
