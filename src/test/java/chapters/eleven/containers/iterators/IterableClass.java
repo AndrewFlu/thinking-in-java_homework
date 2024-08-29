@@ -1,4 +1,4 @@
-package chapters.eleven.containers.collectionanditerator.iterable;
+package chapters.eleven.containers.iterators;
 
 import java.util.Iterator;
 
