@@ -8,10 +8,10 @@ public class ShapeGenerator {
 
     public Shape next() {
         return switch (random.nextInt(4)) {
-            case 1 -> new Square();
-            case 2 -> new Triangle();
-            case 3 -> new Octagon();
-            default -> new Circle();
+            case 1 -> new Square(2);
+            case 2 -> new Triangle(5);
+            case 3 -> new Octagon(7);
+            default -> new Circle(5);
         };
     }
 }

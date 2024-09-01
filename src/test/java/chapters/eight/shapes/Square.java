@@ -1,13 +1,21 @@
 package chapters.eight.shapes;
 
-public class Square extends Shape{
+import static net.midview.Print.print;
+
+public class Square extends Shape {
+
+    public Square(int i) {
+        super(i);
+        print("Drawing Square");
+    }
+
     @Override
     public void draw() {
         System.out.println("Square.draw()");
     }
 
     @Override
-    public void erase(){
+    public void erase() {
         System.out.println("Square.erase()");
     }
 
