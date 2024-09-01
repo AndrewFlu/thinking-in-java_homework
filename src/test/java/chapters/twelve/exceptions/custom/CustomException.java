@@ -1,4 +1,4 @@
-package chapters.twelve.exceptions;
+package chapters.twelve.exceptions.custom;
 
 public class CustomException extends Exception {
     private final String message;
