@@ -7,7 +7,8 @@ public class IndexExceptionTestDrive {
             Integer outOfBound = ints[5];
             System.out.println(outOfBound);
         } catch (ArrayIndexOutOfBoundsException ex) {
-            System.out.println(ex.getLocalizedMessage());
+//            System.out.println(ex.getLocalizedMessage());
+            ex.printStackTrace(System.out);
         }
 
     }
