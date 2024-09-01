@@ -2,14 +2,17 @@ package chapters.twelve.exceptions.multiexception;
 
 public class HomeTask {
 
-    public void testEngine() throws EnginException {
+    // f()
+    public void testEngine() {
         try {
             testIgnition();
         } catch (IgnitionException e) {
-            throw new EnginException();
+            throw new RuntimeException(e);
         }
     }
 
+
+    // g()
     public void testIgnition() throws IgnitionException {
         throw new IgnitionException();
     }

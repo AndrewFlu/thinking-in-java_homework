@@ -10,11 +10,6 @@ public class HomeTaskTestDrive {
             e.printStackTrace(System.out);
         }
 
-        try{
-            ht.testEngine();
-        } catch (EnginException e) {
-            System.out.println("Перехвачено исключение при вызове метода testEngine()");
-            e.printStackTrace(System.out);
-        }
+        ht.testEngine();
     }
 }
