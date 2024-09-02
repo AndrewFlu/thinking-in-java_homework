@@ -12,6 +12,7 @@ public class Circle extends Shape {
     @Override
     public void draw() {
         System.out.println("Circle.draw()");
+        throw new IllegalArgumentException("An error occured while drawing Circle");
     }
 
     @Override

@@ -17,6 +17,15 @@ public class CADSystem extends Shape {
         print("Combined constructor");
     }
 
+    @Override
+    public void draw() throws IllegalArgumentException {
+        t.draw();
+        c.draw();
+        for (int i = 0; i < lines.length; i++) {
+            lines[i].draw();
+        }
+    }
+
     public void dispose() {
         print("CADSystem.dispose()");
         // The order of cleanup is the reverse
@@ -32,6 +41,7 @@ public class CADSystem extends Shape {
         CADSystem x = new CADSystem(47);
         try {
             // Code and exception handling...
+            x.draw();
         } finally {
             x.dispose();
         }

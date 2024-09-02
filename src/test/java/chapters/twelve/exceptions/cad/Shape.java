@@ -2,12 +2,15 @@ package chapters.twelve.exceptions.cad;
 
 import static net.midview.Print.print;
 
-public class Shape {
+public abstract class Shape {
+
+    public static final int MAX_INT = 30;
+
     public Shape(int i) {
         print("Shape constructor");
     }
 
-    public void draw(){}
+    public abstract void draw() throws IllegalArgumentException;
 
     public void erase(){}
 
