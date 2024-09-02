@@ -2,18 +2,25 @@ package chapters.twelve.exceptions.lostexception;
 
 public class LostMessageTestDrive {
     public static void main(String[] args) {
+        LostMessage lostMessage = new LostMessage();
         try {
-            LostMessage lostMessage = new LostMessage();
             try {
                 lostMessage.mainAction();
-            } catch (VeryImportantException e) {
-                throw new RuntimeException(e);
             } finally {
-                lostMessage.dispose();
+                try {
+                    lostMessage.dispose();
+                } catch (SecondPriorityException secondEx) {
+                    System.out.println(secondEx);
+                } finally {
+                    try {
+                        throw new ThirdPriorityException();
+                    } catch (ThirdPriorityException ex) {
+                        System.out.println(ex);
+                    }
+                }
             }
-        } catch (Exception ex) {
-            System.out.println("Блок catch (Exception)");
-            System.out.println(ex);
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }
