@@ -6,8 +6,8 @@ public class LostMessage {
         throw new VeryImportantException();
     }
 
-    void dispose() throws SimpleException {
-        System.out.println("dispose() is running...generate SimpleException");
-        throw new SimpleException();
+    void dispose() throws SecondPriorityException {
+        System.out.println("dispose() is running...generate SecondPriorityException");
+        throw new SecondPriorityException();
     }
 }

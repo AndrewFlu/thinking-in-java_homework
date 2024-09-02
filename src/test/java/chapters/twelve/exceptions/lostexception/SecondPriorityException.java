@@ -1,6 +1,6 @@
 package chapters.twelve.exceptions.lostexception;
 
-public class SimpleException extends Exception {
+public class SecondPriorityException extends Exception {
     @Override
     public String toString() {
         return "Второстепенное исключение";
