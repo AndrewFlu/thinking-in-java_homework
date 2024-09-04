@@ -1,5 +1,7 @@
 package chapters.twelve.exceptions.restrictions;
 
+import chapters.nine.abstractexamples.downcasting.SoundChecker;
+
 public class StormyInning extends Inning implements Storm {
 
     // Можно добавлять новые исключения для конструкторов,
@@ -30,10 +32,20 @@ public class StormyInning extends Inning implements Storm {
     public void rainedHard() throws RainedOut {
     }
 
+    @Override
+    public void pitch(){
+        try {
+            super.pitch();
+        } catch (UmpireException e) {
+            e.printStackTrace(System.err);
+        }
+    }
+
     public static void main(String[] args) {
         try {
             StormyInning si = new StormyInning();
             si.atBat();
+            si.pitch();
         } catch (PopFoul popFoul) {
             System.out.println("Pop foul");
         } catch (RainedOut rainedOut) {

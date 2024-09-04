@@ -13,4 +13,9 @@ public abstract class Inning {
     public void walk() {
         // не возбуждает контролируемых исключений
     }
+
+    public void pitch() throws UmpireException {
+        System.out.println("Подача");
+        throw new UmpireException();
+    }
 }
