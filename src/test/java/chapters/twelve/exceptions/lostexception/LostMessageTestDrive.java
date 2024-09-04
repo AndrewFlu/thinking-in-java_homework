@@ -10,7 +10,11 @@ public class LostMessageTestDrive {
                 try {
                     lostMessage.dispose();
                 } finally {
-                    throw new ThirdPriorityException();
+                    try {
+                        throw new ThirdPriorityException();
+                    } catch (ThirdPriorityException ex) {
+                        System.out.println(ex);
+                    }
                 }
             }
         } catch (Exception e) {
