@@ -3,9 +3,11 @@ package chapters.thirteen.strings.formatspecificators;
 import java.util.Formatter;
 
 public class Receipt {
-    public static final String CENTER_WIDTH = "5";
-    public static final String LEFT_BORDER_WIDTH = "1" + CENTER_WIDTH;
-    public static final String RIGHT_BORDER_WIDTH = "10";
+    public static int BASE_WIDTH = 30;
+
+    private static final int CENTER_WIDTH = BASE_WIDTH / 6;
+    private static final int LEFT_BORDER_WIDTH = BASE_WIDTH / 2;
+    private static final int RIGHT_BORDER_WIDTH = BASE_WIDTH / 3;
 
     private final Formatter f = new Formatter(System.out);
     private double total = 0;
@@ -16,7 +18,7 @@ public class Receipt {
     }
 
     public void print(String name, int qty, double price) {
-        f.format("%-" + LEFT_BORDER_WIDTH + ".1" + CENTER_WIDTH + "s %5d %" + RIGHT_BORDER_WIDTH + ".2f\n", name, qty, price);
+        f.format("%-" + LEFT_BORDER_WIDTH + "." + LEFT_BORDER_WIDTH + "s %"+ CENTER_WIDTH + "s %" + RIGHT_BORDER_WIDTH + ".2f\n", name, qty, price);
         total += price;
     }
 
