@@ -1,6 +1,6 @@
 package chapters.twelve.exceptions.custom;
 
-public class CustomException extends Exception {
+public class CustomException extends RuntimeException {
     private final String message;
 
     public CustomException(String message) {
