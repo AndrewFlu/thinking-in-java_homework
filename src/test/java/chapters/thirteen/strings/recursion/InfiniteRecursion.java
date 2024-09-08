@@ -6,7 +6,7 @@ import java.util.List;
 public class InfiniteRecursion {
     @Override
     public String toString() {
-        return "Address of class InfiniteRecursion is: " + this;
+        return "Address of class InfiniteRecursion is: " + super.toString();
     }
 
     public static void main(String[] args) {
