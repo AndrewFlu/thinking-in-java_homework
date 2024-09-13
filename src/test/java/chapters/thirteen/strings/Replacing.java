@@ -8,5 +8,6 @@ public class Replacing {
     public static void main(String[] args) {
         print(s.replaceFirst("f\\w+", "located"));
         print(s.replaceAll("strawberry|tree|heering", "banana"));
+        print(s.replaceAll("[aeiouy]", "_"));
     }
 }
