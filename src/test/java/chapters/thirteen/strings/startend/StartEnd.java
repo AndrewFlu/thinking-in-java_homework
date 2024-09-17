@@ -1,16 +1,18 @@
 package chapters.thirteen.strings.startend;
 
+import chapters.thirteen.strings.groups.Groups;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static net.midview.Print.print;
 
 public class StartEnd {
-    public static String input = "As long as there is injustice, whenever a\n" +
-            "Targathian baby cries out, wherever a distress\n" +
-            "signal sounds among the stars ... We'll be there.\n" +
-            "This fine ship, and this fine crew ...\n" +
-            "Never give up! Never surrender!";
+//    public static String input = "As long as there is injustice, whenever a\n" +
+//            "Targathian baby cries out, wherever a distress\n" +
+//            "signal sounds among the stars ... We'll be there.\n" +
+//            "This fine ship, and this fine crew ...\n" +
+//            "Never give up! Never surrender!";
 
     static void examine(String s, String regex) {
         Display d = new Display(regex);
@@ -29,9 +31,9 @@ public class StartEnd {
     }
 
     public static void main(String[] args) {
-        for (String in : StartEnd.input.split("\n")) {
+        for (String in : Groups.POEM.split("\n")) {
             print("input: " + in);
-            for (String regex : new String[]{"\\w*ere\\w*", "T\\w+", "Never.*?!"}) {
+            for (String regex : new String[]{"(?m)\\w*ere\\w*", "(?m)T\\w+", "(?m)Never.*?!"}) {
                 StartEnd.examine(in, regex);
             }
         }
