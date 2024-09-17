@@ -1,5 +1,7 @@
 package chapters.thirteen.strings.groups;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,13 +16,15 @@ public class Groups {
             "The frumious Bandersnatch.";
 
     public static void main(String[] args) {
-        Matcher m = Pattern.compile("(?m)(\\S+)\\s+((\\S+)\\s+(\\S+))$").matcher(POEM);
+//        String regex = "(?m)(\\S+)\\s+((\\S+)\\s+(\\S+))$";
+        String uniqueLetterWordsRegex = "\\b\\w+\\b";
+        Matcher m = Pattern.compile(uniqueLetterWordsRegex).matcher(POEM);
 
+        HashSet<String> uniqueWords = new HashSet<>();
         while (m.find()) {
-            for (int i = 0; i < m.groupCount(); i++) {
-                System.out.print("[" + m.group(i) + "]");
-                System.out.println();
-            }
+            uniqueWords.add(m.group(0).toLowerCase());
         }
+
+        System.out.println(uniqueWords);
     }
 }
