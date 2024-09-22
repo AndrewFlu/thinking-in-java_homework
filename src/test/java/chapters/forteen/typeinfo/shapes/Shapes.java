@@ -14,8 +14,10 @@ public class Shapes {
         System.out.println();
         Shape rhomboid = new Rhomboid();
         // down-casting
-        ((Rhomboid)rhomboid).draw();
-        // casting to Circle
-        ((Circle)rhomboid).draw();
+        if (rhomboid instanceof Rhomboid) {
+            ((Rhomboid)rhomboid).draw();
+        } else {
+            throw new RuntimeException("Объект не является типом Rhomboid");
+        }
     }
 }
