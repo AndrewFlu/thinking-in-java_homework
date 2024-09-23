@@ -16,6 +16,7 @@ public class Shapes {
         Shape rhomboid = new Rhomboid();
         // down-casting
         if (rhomboid instanceof Rhomboid) {
+            rhomboid.setActive();
             ((Rhomboid) rhomboid).draw();
         } else {
             throw new RuntimeException("Объект не является типом Rhomboid");

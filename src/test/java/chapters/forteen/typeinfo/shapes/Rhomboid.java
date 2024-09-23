@@ -3,6 +3,6 @@ package chapters.forteen.typeinfo.shapes;
 public class Rhomboid extends Shape{
     @Override
     public String toString() {
-        return "Rhomboid";
+        return "[isActive=" + isActive + "]Rhomboid";
     }
 }
