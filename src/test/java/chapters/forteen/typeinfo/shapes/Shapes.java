@@ -9,15 +9,23 @@ public class Shapes {
 
         for (Shape shape : shapeList) {
             shape.draw();
+            rotate(shape);
         }
 
         System.out.println();
         Shape rhomboid = new Rhomboid();
         // down-casting
         if (rhomboid instanceof Rhomboid) {
-            ((Rhomboid)rhomboid).draw();
+            ((Rhomboid) rhomboid).draw();
         } else {
             throw new RuntimeException("Объект не является типом Rhomboid");
+        }
+    }
+
+    static void rotate(Shape shape) {
+        if (!(shape instanceof Circle)) {
+            System.out.println("Фигура " + shape +
+                    " повёрнута");
         }
     }
 }
