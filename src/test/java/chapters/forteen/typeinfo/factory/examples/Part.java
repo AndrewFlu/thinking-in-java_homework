@@ -32,4 +32,13 @@ class Part {
 
         return partFactories.get(n).create();
     }
+
+    public static List<Part> createArray(int size) {
+        List<Part> result = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            result.add(createRandom());
+        }
+
+        return result;
+    }
 }
