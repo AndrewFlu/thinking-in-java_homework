@@ -16,6 +16,7 @@ public class ForNameCreator extends PetCreator {
             "chapters/forteen/typeinfo/pets/Rat",
             "chapters/forteen/typeinfo/pets/Mouse",
             "chapters/forteen/typeinfo/pets/Hamster",
+            "chapters/forteen/typeinfo/pets/Gerbil",
     };
 
     @SuppressWarnings("unchecked")

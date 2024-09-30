@@ -31,6 +31,7 @@ public class PetCount {
             if (pet instanceof Rat) counter.count("Rat");
             if (pet instanceof Mouse) counter.count("Mouse");
             if (pet instanceof Hamster) counter.count("Hamster");
+            if (pet instanceof Gerbil) counter.count("Gerbil");
         }
 
         System.out.println();

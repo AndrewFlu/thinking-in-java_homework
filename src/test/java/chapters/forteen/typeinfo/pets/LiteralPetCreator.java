@@ -12,7 +12,7 @@ public class LiteralPetCreator extends PetCreator {
                     Arrays.asList(
                             Pet.class, Dog.class, Cat.class, Rodent.class,
                             Mutt.class, Pug.class, EgyptianMau.class, Manx.class,
-                            Cymric.class, Rat.class, Mouse.class, Hamster.class
+                            Cymric.class, Rat.class, Mouse.class, Hamster.class, Gerbil.class
                     )
             );
 
