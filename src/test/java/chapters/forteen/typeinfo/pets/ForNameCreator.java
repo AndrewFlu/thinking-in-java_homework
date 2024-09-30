@@ -8,14 +8,14 @@ public class ForNameCreator extends PetCreator {
 
     // Типы, которые должны создаваться случайным образом
     private static String[] typeNames = {
-            "chapters/forteen/typeinfo/pets/Mutt.java",
-            "chapters/forteen/typeinfo/pets/Pug.java",
-            "chapters/forteen/typeinfo/pets/EgyptianMau.java",
-            "chapters/forteen/typeinfo/pets/Manx.java",
-            "chapters/forteen/typeinfo/pets/Cymric.java",
-            "chapters/forteen/typeinfo/pets/Rat.java",
-            "chapters/forteen/typeinfo/pets/Mouse.java",
-            "chapters/forteen/typeinfo/pets/Hamster.java",
+            "chapters/forteen/typeinfo/pets/Mutt",
+            "chapters/forteen/typeinfo/pets/Pug",
+            "chapters/forteen/typeinfo/pets/EgyptianMau",
+            "chapters/forteen/typeinfo/pets/Manx",
+            "chapters/forteen/typeinfo/pets/Cymric",
+            "chapters/forteen/typeinfo/pets/Rat",
+            "chapters/forteen/typeinfo/pets/Mouse",
+            "chapters/forteen/typeinfo/pets/Hamster",
     };
 
     @SuppressWarnings("unchecked")
