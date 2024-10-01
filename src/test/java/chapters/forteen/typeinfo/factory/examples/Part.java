@@ -1,6 +1,7 @@
 package chapters.forteen.typeinfo.factory.examples;
 
 import chapters.forteen.typeinfo.factory.Factory;
+import chapters.forteen.typeinfo.factory.examples.pojo.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ class Part {
     public static Part createRandom() {
         int n = rand.nextInt(partFactories.size());
 
-        return partFactories.get(n).create();
+        return partFactories.get(n).newInstance();
     }
 
     public static List<Part> createArray(int size) {
