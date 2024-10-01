@@ -37,6 +37,7 @@ public class TypeCounter extends HashMap<Class<?>, Integer> {
         }
 
         result.delete(result.length() - 2, result.length());
+        result.append("}");
         return result.toString();
     }
 }

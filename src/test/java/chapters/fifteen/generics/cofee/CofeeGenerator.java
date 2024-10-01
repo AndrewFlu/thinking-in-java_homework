@@ -1,6 +1,7 @@
 package chapters.fifteen.generics.cofee;
 
 import utils.Generator;
+import utils.TypeCounter;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -55,12 +56,19 @@ public class CofeeGenerator implements Generator<Cofee>, Iterable<Cofee> {
     }
 
     public static void main(String[] args) {
-        CofeeGenerator generator = new CofeeGenerator();
-        for (int i = 0; i < 5; i++) {
-            System.out.println(generator.next());
+//        CofeeGenerator generator = new CofeeGenerator();
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(generator.next());
+//        }
+//        for (Cofee c : new CofeeGenerator(5)) {
+//            System.out.println(c);
+//        }
+        TypeCounter counter = new TypeCounter(Cofee.class);
+        for (Cofee cofee : new CofeeGenerator(15)) {
+            System.out.println(cofee);
+            counter.count(cofee);
         }
-        for (Cofee c : new CofeeGenerator(5)) {
-            System.out.println(c);
-        }
+        System.out.println();
+        System.out.println(counter);
     }
 }
