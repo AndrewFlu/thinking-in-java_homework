@@ -1,4 +1,4 @@
-package chapters.forteen.typeinfo.factory.examples;
+package chapters.forteen.typeinfo.factory.examples.parts;
 
 import utils.TypeCounter;
 

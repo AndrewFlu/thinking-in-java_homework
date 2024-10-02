@@ -1,9 +1,9 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Belt;
+import chapters.forteen.typeinfo.factory.examples.parts.Belt;
 
 public class FanBelt extends Belt {
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<FanBelt> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<FanBelt> {
         @Override
         public FanBelt create() {
             return new FanBelt();

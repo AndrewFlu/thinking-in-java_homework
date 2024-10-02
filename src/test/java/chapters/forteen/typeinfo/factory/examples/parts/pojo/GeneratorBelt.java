@@ -1,9 +1,9 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Belt;
+import chapters.forteen.typeinfo.factory.examples.parts.Belt;
 
 public class GeneratorBelt extends Belt {
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<GeneratorBelt> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<GeneratorBelt> {
 
         @Override
         public GeneratorBelt create() {

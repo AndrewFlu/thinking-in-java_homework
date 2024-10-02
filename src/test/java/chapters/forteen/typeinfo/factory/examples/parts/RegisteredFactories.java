@@ -1,4 +1,4 @@
-package chapters.forteen.typeinfo.factory.examples;
+package chapters.forteen.typeinfo.factory.examples.parts;
 
 public class RegisteredFactories {
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
-package chapters.forteen.typeinfo.factory.examples;
+package chapters.forteen.typeinfo.factory.examples.parts;
 
-import chapters.forteen.typeinfo.factory.Factory;
-import chapters.forteen.typeinfo.factory.examples.pojo.*;
+import chapters.forteen.typeinfo.factory.examples.parts.pojo.*;
 
 import java.util.ArrayList;
 import java.util.List;

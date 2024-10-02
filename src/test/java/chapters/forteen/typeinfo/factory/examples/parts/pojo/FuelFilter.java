@@ -1,10 +1,10 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Filter;
+import chapters.forteen.typeinfo.factory.examples.parts.Filter;
 
 public class FuelFilter extends Filter {
     // Создание фабрики класса для каждого конкретного типа
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<FuelFilter> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<FuelFilter> {
 
         @Override
         public FuelFilter create() {

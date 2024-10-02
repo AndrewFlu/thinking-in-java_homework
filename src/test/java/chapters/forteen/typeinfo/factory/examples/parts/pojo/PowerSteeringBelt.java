@@ -1,9 +1,9 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Belt;
+import chapters.forteen.typeinfo.factory.examples.parts.Belt;
 
 public class PowerSteeringBelt extends Belt {
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<PowerSteeringBelt> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<PowerSteeringBelt> {
 
         @Override
         public PowerSteeringBelt create() {

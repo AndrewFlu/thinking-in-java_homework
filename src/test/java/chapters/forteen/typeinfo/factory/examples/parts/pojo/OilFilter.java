@@ -1,9 +1,9 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Filter;
+import chapters.forteen.typeinfo.factory.examples.parts.Filter;
 
 public class OilFilter extends Filter {
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<OilFilter> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<OilFilter> {
 
         @Override
         public OilFilter create() {

@@ -1,4 +1,4 @@
-package chapters.forteen.typeinfo.factory;
+package chapters.forteen.typeinfo.factory.examples.parts;
 
 public interface Factory<T> {
     T create();

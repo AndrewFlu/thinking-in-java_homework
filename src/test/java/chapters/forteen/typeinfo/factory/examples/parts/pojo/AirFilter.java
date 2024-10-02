@@ -1,9 +1,9 @@
-package chapters.forteen.typeinfo.factory.examples.pojo;
+package chapters.forteen.typeinfo.factory.examples.parts.pojo;
 
-import chapters.forteen.typeinfo.factory.examples.Filter;
+import chapters.forteen.typeinfo.factory.examples.parts.Filter;
 
 public class AirFilter extends Filter {
-    public static class Factory implements chapters.forteen.typeinfo.factory.Factory<AirFilter> {
+    public static class Factory implements chapters.forteen.typeinfo.factory.examples.parts.Factory<AirFilter> {
 
         @Override
         public AirFilter create() {
