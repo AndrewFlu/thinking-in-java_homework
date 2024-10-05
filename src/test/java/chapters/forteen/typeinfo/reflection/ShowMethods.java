@@ -13,7 +13,10 @@ public class ShowMethods {
             "ShowMethods Qualified.class.name word\n" +
             "To search for methods involving 'word'";
 
-    private static final Pattern pattern = Pattern.compile("\\w+\\.");
+//    private static final Pattern pattern = Pattern.compile("\\w+\\.");
+
+    // регулярное выражение, чтобы в названиях методов не было: final, native и имен пакетов
+    private static final Pattern pattern = Pattern.compile("native\\s+|final\\s+|\\w+\\.");
 
     public static void main(String[] args) {
         if (args.length < 1) {
