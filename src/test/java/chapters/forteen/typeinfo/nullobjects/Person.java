@@ -5,6 +5,9 @@ public class Person {
     public final String lastName;
     public final String address;
 
+    // singleton
+    public static final Person NULL = new NullPerson();
+
     public Person(String firstName, String lastName, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -17,8 +20,6 @@ public class Person {
     }
 
     public static class NullPerson extends Person implements Null {
-        // singleton
-        public static final Person NULL = new NullPerson();
 
         private NullPerson() {
             super("None", "None", "None");
