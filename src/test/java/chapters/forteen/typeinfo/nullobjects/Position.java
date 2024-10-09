@@ -33,8 +33,13 @@ public class Position {
         }
     }
 
+    public Position(String jobTitle) {
+        title = jobTitle;
+        person = Person.NULL;
+    }
+
     @Override
     public String toString() {
-        return "Position" + title + ' ' + person;
+        return "Position " + title + ' ' + person;
     }
 }
