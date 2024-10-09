@@ -1,4 +1,4 @@
-package chapters.forteen.typeinfo.nullobjects;
+package chapters.forteen.typeinfo.nullobjects.staff;
 
 import java.util.ArrayList;
 

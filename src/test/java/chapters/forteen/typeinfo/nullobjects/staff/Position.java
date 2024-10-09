@@ -1,4 +1,4 @@
-package chapters.forteen.typeinfo.nullobjects;
+package chapters.forteen.typeinfo.nullobjects.staff;
 
 public class Position {
     private String title;
