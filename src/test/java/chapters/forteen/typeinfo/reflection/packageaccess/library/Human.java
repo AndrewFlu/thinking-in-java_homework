@@ -22,6 +22,6 @@ public class Human {
     }
 
     private void saySalary() {
-        System.out.println("My salary is " + salary + "rubbles");
+        System.out.println("My salary is " + salary + " rubbles");
     }
 }
