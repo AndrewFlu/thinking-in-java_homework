@@ -1,9 +1,8 @@
 package chapters.fifteen.generics.tuples.test;
 
-import chapters.fifteen.generics.tuples.FiveTuple;
-import chapters.fifteen.generics.tuples.FourTuple;
-import chapters.fifteen.generics.tuples.ThreeTuple;
-import chapters.fifteen.generics.tuples.TwoTuple;
+import chapters.fifteen.generics.tuples.*;
+
+import java.util.List;
 
 public class TupleTest {
     public static void main(String[] args) {
@@ -13,13 +12,14 @@ public class TupleTest {
         System.out.println(g());
         System.out.println(h());
         System.out.println(k());
+        System.out.println(l());
     }
 
     private static TwoTuple<String, Integer> f() {
         return new TwoTuple<String, Integer>("Hi", 47);
     }
 
-    private static ThreeTuple<Amphibian, Integer, String>g() {
+    private static ThreeTuple<Amphibian, Integer, String> g() {
         return new ThreeTuple<>(new Amphibian(), 46, "Yo!");
     }
 
@@ -29,5 +29,9 @@ public class TupleTest {
 
     private static FiveTuple<Vehicle, Amphibian, String, Integer, Double> k() {
         return new FiveTuple<>(new Vehicle(), new Amphibian(), "hi", 47, 11.2);
+    }
+
+    private static SixTuple<Vehicle, Amphibian, String, Integer, Double, List<String>> l() {
+        return new SixTuple<>(new Vehicle(), new Amphibian(), "Hi!", 15, 10.7, List.of("MacBook", "is", "awesome"));
     }
 }
