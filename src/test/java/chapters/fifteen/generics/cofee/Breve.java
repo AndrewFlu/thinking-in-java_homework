@@ -1,4 +1,4 @@
 package chapters.fifteen.generics.cofee;
 
-public class Breve extends Cofee {
+public class Breve extends Coffee {
 }
