@@ -2,11 +2,13 @@ package chapters.fifteen.generics.fibonacci;
 
 import java.util.Iterator;
 
-public class IterableFibonacci extends Fibonacci implements Iterable<Integer>{
+public class IterableFibonacci implements Iterable<Integer>{
     private int n;
+    private final Fibonacci fibonacci;
 
     public IterableFibonacci(int count) {
         this.n = count;
+        fibonacci = new Fibonacci();
     }
 
     @Override
@@ -20,7 +22,7 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer>{
             @Override
             public Integer next() {
                 n--;
-                return IterableFibonacci.this.next();
+                return fibonacci.next();
             }
 
             @Override
