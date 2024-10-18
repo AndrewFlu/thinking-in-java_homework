@@ -1,6 +1,5 @@
 package chapters.fifteen.generics.containers;
 
-import java.sql.Array;
 import java.util.*;
 
 public class New {
