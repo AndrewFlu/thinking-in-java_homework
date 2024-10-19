@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class CofeeGenerator {
-    private static List<IFactory<? extends Cofee>> cofeesFactories = Arrays.asList(
+public class CoffeeGenerator {
+    private static final List<IFactory<? extends Cofee>> coffeesFactories = Arrays.asList(
             new Americano.Factory(),
             new Breve.Factory(),
             new Cappuccino.Factory(),
@@ -27,8 +27,8 @@ public class CofeeGenerator {
     }
 
     public static Cofee getRandom() {
-        int n = rand.nextInt(cofeesFactories.size());
-        return cofeesFactories.get(n).create();
+        int n = rand.nextInt(coffeesFactories.size());
+        return coffeesFactories.get(n).create();
     }
 
 

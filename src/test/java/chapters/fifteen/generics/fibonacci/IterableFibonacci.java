@@ -4,11 +4,11 @@ import java.util.Iterator;
 
 public class IterableFibonacci implements Iterable<Integer>{
     private int n;
-    private final Fibonacci fibonacci;
+    private final FibonacciGenerator fibonacciGenerator;
 
     public IterableFibonacci(int count) {
         this.n = count;
-        fibonacci = new Fibonacci();
+        fibonacciGenerator = new FibonacciGenerator();
     }
 
     @Override
@@ -22,7 +22,7 @@ public class IterableFibonacci implements Iterable<Integer>{
             @Override
             public Integer next() {
                 n--;
-                return fibonacci.next();
+                return fibonacciGenerator.next();
             }
 
             @Override

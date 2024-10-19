@@ -2,7 +2,7 @@ package chapters.fifteen.generics.fibonacci;
 
 import utils.Generator;
 
-public class Fibonacci implements Generator<Integer> {
+public class FibonacciGenerator implements Generator<Integer> {
     private int count = 0;
 
     private int getFibonacciNumber(int n) {
@@ -18,9 +18,9 @@ public class Fibonacci implements Generator<Integer> {
 
     // test-drive
     public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
+        FibonacciGenerator fibonacciGenerator = new FibonacciGenerator();
         for (int i = 0; i < 20; i++) {
-            System.out.println(fibonacci.next());
+            System.out.println(fibonacciGenerator.next());
         }
     }
 }
