@@ -54,7 +54,16 @@ public class Generators {
         }
 
         // Set
-        Generator<String> stringGenerator = new StringGenerator();
+        Generator<String> stringGenerator = new Generator<String>() {
+            private Random random = new Random();
+
+            @Override
+            public String next() {
+                char[] chars = {'a', 'b', 'c'};
+                return String.valueOf(chars[random.nextInt(chars.length)]);
+            }
+        };
+
         Collection<String> stringSet = fill(new HashSet<>(), stringGenerator, 3);
         for (String s : stringSet) {
             System.out.println(s);
@@ -64,16 +73,6 @@ public class Generators {
         Collection<Integer> fibonacci = fill(new PriorityQueue<>(), new FibonacciGenerator(), 10);
         for (Integer f : fibonacci) {
             System.out.println(f);
-        }
-    }
-
-    private static class StringGenerator implements Generator<String> {
-        private Random random = new Random();
-
-        @Override
-        public String next() {
-            char[] chars = {'a', 'b', 'c'};
-            return String.valueOf(chars[random.nextInt(chars.length)]);
         }
     }
 }
