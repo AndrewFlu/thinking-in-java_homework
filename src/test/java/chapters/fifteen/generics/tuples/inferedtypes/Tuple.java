@@ -1,9 +1,6 @@
 package chapters.fifteen.generics.tuples.inferedtypes;
 
-import chapters.fifteen.generics.tuples.FiveTuple;
-import chapters.fifteen.generics.tuples.FourTuple;
-import chapters.fifteen.generics.tuples.ThreeTuple;
-import chapters.fifteen.generics.tuples.TwoTuple;
+import chapters.fifteen.generics.tuples.*;
 
 public class Tuple {
     public static <A, B> TwoTuple<A, B> tuple(A a, B b) {
@@ -21,4 +18,8 @@ public class Tuple {
     public static <A, B, C, D, E> FiveTuple<A, B, C, D, E> tuple(A a, B b, C c, D d, E e) {
         return new FiveTuple<>(a, b, c, d, e);
     }
-}
+
+    public static <A, B, C, D, E, F>SixTuple<A, B, C, D, E, F> tuple(A a, B b, C c, D d, E e, F f) {
+        return new SixTuple<>(a, b, c, d, e, f);
+    }
+ }

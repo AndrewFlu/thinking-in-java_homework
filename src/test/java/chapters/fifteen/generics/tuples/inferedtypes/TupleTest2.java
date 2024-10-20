@@ -1,9 +1,7 @@
 package chapters.fifteen.generics.tuples.inferedtypes;
 
-import chapters.fifteen.generics.tuples.FiveTuple;
-import chapters.fifteen.generics.tuples.FourTuple;
-import chapters.fifteen.generics.tuples.ThreeTuple;
-import chapters.fifteen.generics.tuples.TwoTuple;
+import chapters.eight.shapes.Shape;
+import chapters.fifteen.generics.tuples.*;
 import chapters.fifteen.generics.tuples.test.Amphibian;
 import chapters.fifteen.generics.tuples.test.Vehicle;
 
@@ -19,6 +17,11 @@ public class TupleTest2 {
         System.out.println(g());
         System.out.println(h());
         System.out.println(k());
+        System.out.println(sixFunc());
+    }
+
+    private static SixTuple sixFunc() {
+        return tuple(1, 2.2, "Three", new Shape(4), 5.5f, true);
     }
 
     private static FiveTuple k() {
