@@ -4,17 +4,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ClassTypeCapture<T> {
-    Class<T> kind;
-    Map<String, Class<?>> kindMap = new HashMap<>();
+//    Class<T> kind;
+    Map<String, Class<?>> kindMap;
 
 
     public ClassTypeCapture(Class<T> kind) {
-        this.kind = kind;
+//        this.kind = kind;
+        kindMap = new HashMap<>();
         kindMap.put(kind.getSimpleName(), kind);
     }
 
     public boolean isInstanceOfTypeClassTypeCapture(Object arg) {
-        return kind.isInstance(arg);
+        return kindMap.entrySet().stream().anyMatch(e -> e.getValue().isInstance(arg));
     }
 
     public void addType(String typeName, Class<?> kind) {
