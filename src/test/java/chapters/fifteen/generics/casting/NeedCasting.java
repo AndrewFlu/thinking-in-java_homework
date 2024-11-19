@@ -14,6 +14,6 @@ public class NeedCasting {
                 new FileInputStream(args[0])
         );
 
-        List<Widget> shapes = (List<Widget>) in.readObject();
+        List<Widget> shapes = List.class.cast(in.readObject());
     }
 }
