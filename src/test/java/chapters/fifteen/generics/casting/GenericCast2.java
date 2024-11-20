@@ -1,11 +1,11 @@
 package chapters.fifteen.generics.casting;
 
-public class GenericCast {
-    public static final int SIZE = 10;
+public class GenericCast2 {
+    private static final int SIZE = 5;
 
     public static void main(String[] args) {
-        FixedSizeStack<String> stringFixedSizeStack = new FixedSizeStack<>(SIZE);
-        for (String s : "A B C D E F G H I J".split(" ")) {
+        FixedSizeStack2<String> stringFixedSizeStack = new FixedSizeStack2<>(SIZE);
+        for (String s : "A B C D E".split(" ")) {
             stringFixedSizeStack.push(s);
         }
 
