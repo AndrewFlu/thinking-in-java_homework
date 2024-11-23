@@ -3,15 +3,15 @@ package chapters.fifteen.generics.recurring;
 public class BasicHolder<T> {
     T element;
 
-    void set(T arg) {
+    public void set(T arg) {
         element = arg;
     }
 
-    T get() {
+    public T get() {
         return element;
     }
 
-    void printClassInfo() {
+    public void printClassInfo() {
         System.out.println(element.getClass().getSimpleName());
     }
 }
