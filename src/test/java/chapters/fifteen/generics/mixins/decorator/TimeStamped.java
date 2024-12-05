@@ -1,4 +1,4 @@
-package chapters.fifteen.generics.decorator;
+package chapters.fifteen.generics.mixins.decorator;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package chapters.fifteen.generics.decorator;
+package chapters.fifteen.generics.mixins.decorator;
 
 public class Basic {
     private String value;

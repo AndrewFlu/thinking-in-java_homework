@@ -1,4 +1,4 @@
-package chapters.fifteen.generics.decorator.homework;
+package chapters.fifteen.generics.mixins.decorator.homework;
 
 public class DecoFoamCoffee extends CoffeeDecorator {
     private static final String foam = "Красивая пенка";
