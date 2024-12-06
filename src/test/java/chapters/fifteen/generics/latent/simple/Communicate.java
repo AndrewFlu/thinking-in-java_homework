@@ -1,7 +1,7 @@
 package chapters.fifteen.generics.latent.simple;
 
 public class Communicate {
-    public static <T extends Performs> void perform(T performer) {
+    public static void perform(Performs performer) {
         performer.sit();
         performer.speak();
     }
