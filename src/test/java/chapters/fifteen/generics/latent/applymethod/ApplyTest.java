@@ -1,6 +1,11 @@
 package chapters.fifteen.generics.latent.applymethod;
 
+import chapters.forteen.typeinfo.pets.Cat;
+import chapters.forteen.typeinfo.pets.Pet;
+import chapters.forteen.typeinfo.pets.Pets;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ApplyTest {
@@ -31,5 +36,8 @@ public class ApplyTest {
         }
         Apply.apply(shapeQ, Shape.class.getMethod("rotate"));
         Apply.apply(shapeQ, Square.class.getMethod("resize", int.class), 3);
+
+        Pet[] array = Pets.createArray(7);
+        Apply.apply(Arrays.asList(array), Pet.class.getMethod("speak"));
     }
 }

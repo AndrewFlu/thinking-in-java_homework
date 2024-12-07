@@ -1,9 +1,14 @@
 package chapters.forteen.typeinfo.pets;
 
-public class Individual {
+public abstract class Individual {
 
     private static long counter = 0;
     private final long id = counter++;
+
+    public String getName() {
+        return name;
+    }
+
     private String name;
     public Individual(String name) { this.name = name; }
     // 'name' is optional:
@@ -38,4 +43,6 @@ public class Individual {
         }
         return (arg.id < id ? -1 : (arg.id == id ? 0 : 1));
     }
+
+    public abstract void speak();
 }

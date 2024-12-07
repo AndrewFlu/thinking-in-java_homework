@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.pets;
 
-public class Pet extends Individual {
+public abstract class Pet extends Individual {
     public Pet(String name) {
         super(name);
     }
