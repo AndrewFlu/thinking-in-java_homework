@@ -3,7 +3,7 @@ package chapters.sixteen.arrays.generators;
 import utils.Generator;
 
 public class GeneratorsTestDrive {
-    private static int size = 10;
+    private static int size = 5;
 
     public static void main(String[] args) {
         test(CountingGenerator.class);
