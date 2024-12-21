@@ -7,6 +7,10 @@ public class GeneratorsTestDrive {
 
     public static void main(String[] args) {
         test(CountingGenerator.class);
+
+        System.out.println();
+        System.out.println("RandomGenerator.class");
+        test(RandomGenerator.class);
     }
 
     private static void test(Class<?> surroundingClass) {
