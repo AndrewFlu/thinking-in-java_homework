@@ -8,6 +8,18 @@ public class CountingGeneratorTestDrive {
     public static void main(String[] args) {
         double[] d = getArray(new CountingGenerator.Double(), 5);
         System.out.println(Arrays.toString(d));
+
+        String generatedStr = fillString(new CountingGenerator.Character(), 10);
+        System.out.println(generatedStr);
+    }
+
+    private static String fillString(Generator<Character> generator, int size) {
+        char[] result = new char[size];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = generator.next();
+        }
+
+        return String.valueOf(result);
     }
 
     private static double[] getArray(Generator<Double> generator, int size) {
