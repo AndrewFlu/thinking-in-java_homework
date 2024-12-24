@@ -2,6 +2,8 @@ package chapters.sixteen.arrays.generators;
 
 import utils.Generator;
 
+import java.math.BigDecimal;
+
 public class CountingGenerator {
     public static class Boolean implements Generator<java.lang.Boolean> {
         private boolean value = false;
@@ -107,6 +109,18 @@ public class CountingGenerator {
             value += 1.0;
 
             return result;
+        }
+    }
+
+    public static class BigDecimal implements Generator<java.math.BigDecimal> {
+        private double value;
+
+        @Override
+        public java.math.BigDecimal next() {
+            double oldValue = value;
+            value += 1.0;
+
+            return java.math.BigDecimal.valueOf(oldValue);
         }
     }
 }

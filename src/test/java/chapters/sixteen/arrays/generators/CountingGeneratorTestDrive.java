@@ -2,6 +2,7 @@ package chapters.sixteen.arrays.generators;
 
 import utils.Generator;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class CountingGeneratorTestDrive {
@@ -11,6 +12,9 @@ public class CountingGeneratorTestDrive {
 
         String generatedStr = fillString(new CountingGenerator.Character(), 10);
         System.out.println(generatedStr);
+
+        BigDecimal[] b = Generated.array(BigDecimal.class, new CountingGenerator.BigDecimal(), 5);
+        System.out.println(Arrays.toString(b));
     }
 
     private static String fillString(Generator<Character> generator, int size) {
