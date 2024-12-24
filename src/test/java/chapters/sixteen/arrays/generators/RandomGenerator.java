@@ -60,6 +60,18 @@ public class RandomGenerator {
         }
     }
 
+    public static class Long implements Generator<java.lang.Long> {
+
+        private int bound = 10_000;
+        public Long(){}
+        public Long(int modulo) {bound = modulo;}
+
+        @Override
+        public java.lang.Long next() {
+            return random.nextLong(bound);
+        }
+    }
+
     public static class Float implements Generator<java.lang.Float> {
 
         @Override
