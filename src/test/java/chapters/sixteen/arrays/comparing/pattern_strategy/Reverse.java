@@ -1,4 +1,4 @@
-package chapters.sixteen.arrays.comparing;
+package chapters.sixteen.arrays.comparing.pattern_strategy;
 
 import chapters.sixteen.arrays.generators.Generated;
 
