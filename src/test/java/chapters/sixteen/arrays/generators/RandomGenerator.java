@@ -19,7 +19,7 @@ public class RandomGenerator {
 
         @Override
         public java.lang.Byte next() {
-            return (byte)random.nextInt();
+            return (byte) random.nextInt();
         }
     }
 
@@ -32,27 +32,37 @@ public class RandomGenerator {
     }
 
     public static class String extends CountingGenerator.String {
+        // Plug in the random Character generator:
         {
             characterGenerator = new Character();
         }
 
-        public String(){}
-        public String(int length) {super(length);}
+        public String() {
+        }
+
+        public String(int length) {
+            super(length);
+        }
     }
 
     public static class Short implements Generator<java.lang.Short> {
 
         @Override
         public java.lang.Short next() {
-            return (short)random.nextInt();
+            return (short) random.nextInt();
         }
     }
 
     public static class Integer implements Generator<java.lang.Integer> {
 
         private int bound = 10_000;
-        public Integer(){}
-        public Integer(int modulo) {bound = modulo;}
+
+        public Integer() {
+        }
+
+        public Integer(int modulo) {
+            bound = modulo;
+        }
 
         @Override
         public java.lang.Integer next() {
@@ -63,8 +73,13 @@ public class RandomGenerator {
     public static class Long implements Generator<java.lang.Long> {
 
         private int bound = 10_000;
-        public Long(){}
-        public Long(int modulo) {bound = modulo;}
+
+        public Long() {
+        }
+
+        public Long(int modulo) {
+            bound = modulo;
+        }
 
         @Override
         public java.lang.Long next() {
@@ -79,7 +94,7 @@ public class RandomGenerator {
             // Усечение дробной части до двух цифр
             int trimmed = Math.round(random.nextFloat() * 100);
 
-            return ((float)trimmed) / 100;
+            return ((float) trimmed) / 100;
         }
     }
 
@@ -89,7 +104,7 @@ public class RandomGenerator {
         public java.lang.Double next() {
             long trimmed = Math.round(random.nextDouble() * 100);
 
-            return ((double)trimmed) / 100;
+            return ((double) trimmed) / 100;
         }
     }
 }
