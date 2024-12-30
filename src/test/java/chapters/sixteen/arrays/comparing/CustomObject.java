@@ -1,8 +1,6 @@
 package chapters.sixteen.arrays.comparing;
 
-import java.util.Objects;
-
-public class CustomObject {
+public class CustomObject implements Comparable {
     private final int value;
 
     public CustomObject(int value) {
@@ -30,5 +28,13 @@ public class CustomObject {
         return "CustomObject{" +
                 "value=" + value +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o.getClass().isInstance(this)) {
+            CustomObject compareObj = (CustomObject) o;
+            return value < compareObj.value ? -1 : (value == compareObj.value ? 0 : 1);
+        } else throw new IllegalArgumentException("Передан неверный тип объекта");
     }
 }

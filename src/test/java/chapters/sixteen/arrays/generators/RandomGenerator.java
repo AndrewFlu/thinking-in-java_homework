@@ -1,5 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
+import chapters.sixteen.arrays.comparing.CustomObject;
 import utils.Generator;
 
 import java.util.Random;
@@ -105,6 +106,22 @@ public class RandomGenerator {
             long trimmed = Math.round(random.nextDouble() * 100);
 
             return ((double) trimmed) / 100;
+        }
+    }
+
+    public static class CustomObject implements Generator<chapters.sixteen.arrays.comparing.CustomObject> {
+        private int bound = 100;
+
+        public CustomObject(int modulo) {
+            bound = modulo;
+        }
+
+        public CustomObject() {
+        }
+
+        @Override
+        public chapters.sixteen.arrays.comparing.CustomObject next() {
+            return new chapters.sixteen.arrays.comparing.CustomObject(random.nextInt(bound));
         }
     }
 }
