@@ -64,4 +64,13 @@ public class ConvertTo {
 
         return result;
     }
+
+    public static Integer[] object(int[] ints) {
+        Integer[] result = new Integer[ints.length];
+        for (int i = 0; i < ints.length; i++) {
+            result[i] = ints[i];
+        }
+
+        return result;
+    }
 }
