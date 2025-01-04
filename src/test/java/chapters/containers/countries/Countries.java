@@ -17,6 +17,7 @@ public class Countries {
             // Азия
             {"BANGLADESH", "Dhaka"},
             {"CHINA", "Beijing"},
+            {"CHINA", "Beijing"},
             {"SAUDI ARABIA", "Riyadh"},
 
             // Америка
@@ -153,6 +154,7 @@ public class Countries {
 
     public static void main(String[] args) {
         System.out.println("countryMap: " + countries());
+        CountriesTestDrive.printCountryInfo(countries());
         System.out.println("country names 5: " + countryNames(5));
         System.out.println("HashMap of countryMap 3: " + new HashMap<String, String>(countries(3)));
         System.out.println("LinkedHashMap of countryMap 3: " + new LinkedHashMap<String, String>(countries(3)));
