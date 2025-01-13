@@ -3,7 +3,9 @@ package chapters.containers.lightweight;
 import java.util.*;
 
 public class CountingMapData extends AbstractMap<Integer, String> {
+    private static final String[] chars = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split("\\s");
     private final int size;
+    private final Set<Map.Entry<Integer, String>> entries = new InnerEntrySet();
 
     public CountingMapData(int size) {
         this.size = Math.max(size, 0);
@@ -11,32 +13,25 @@ public class CountingMapData extends AbstractMap<Integer, String> {
 
     @Override
     public Set<Map.Entry<Integer, String>> entrySet() {
-        // LinkedHashSet сохраняет порядок иниициализации
-        Set<Map.Entry<Integer, String>> entries = new LinkedHashSet<>();
-        for (int i = 0; i < size; i++) {
-            entries.add(new Entry(i));
-        }
-
         return entries;
     }
 
-    private static class Entry implements Map.Entry<Integer, String> {
+    private static class InnerEntry implements Map.Entry<Integer, String> {
         int index;
 
-        String[] chars = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split("\\s");
-
-        public Entry(int index) {
+        public InnerEntry(int index) {
             this.index = index;
         }
 
         @Override
         public boolean equals(Object o) {
-            return Integer.valueOf(index).equals(o);
+            return o instanceof InnerEntry &&
+                    index == ((InnerEntry) o).index;
         }
 
         @Override
         public int hashCode() {
-            return Objects.hashCode(index);
+            return Integer.valueOf(index).hashCode();
         }
 
         @Override
@@ -48,17 +43,50 @@ public class CountingMapData extends AbstractMap<Integer, String> {
         public String getValue() {
             return
                     chars[index % chars.length] +
-                            Integer.toString(index / chars.length);
+                            index / chars.length;
         }
 
         @Override
         public String setValue(String value) {
-            return "";
+            throw new UnsupportedOperationException();
         }
     }
 
+    // Т.к. мы расширяем уже базовый абстрактный класс, то реализовать нам нужно всего два метода: size и iterator
+    private class InnerEntrySet extends AbstractSet<Map.Entry<Integer, String>> {
+
+        @Override
+        public int size() {
+            return size;
+        }
+
+        @Override
+        public Iterator<Map.Entry<Integer, String>> iterator() {
+            return new InnerIterator();
+        }
+
+        private class InnerIterator implements Iterator<Map.Entry<Integer, String>> {
+
+            // Только один объект Entry на итератор
+            private InnerEntry innerEntry = new InnerEntry(-1);
+
+            @Override
+            public boolean hasNext() {
+                return innerEntry.index < size - 1;
+            }
+
+            @Override
+            public Map.Entry<Integer, String> next() {
+                innerEntry.index++;
+
+                return innerEntry;
+            }
+        }
+    }
+
+
     // test-drive
     public static void main(String[] args) {
-        System.out.println(new CountingMapData(10));
+        System.out.println(new CountingMapData(100));
     }
 }
