@@ -46,6 +46,12 @@ public class UnsupportedOperations {
             System.out.println("remove(): " + e);
         }
 
+        try {
+            list.replaceAll(String::toLowerCase);
+        } catch (Exception e) {
+            System.out.println("List.replaceAll(): " + e);
+        }
+
         // метод List.set() изменяет значение, но не изменяет размер структуры данных
         try {
             list.set(1, "X");
