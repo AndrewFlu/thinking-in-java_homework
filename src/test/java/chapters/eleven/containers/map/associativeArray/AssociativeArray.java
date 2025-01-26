@@ -1,5 +1,10 @@
 package chapters.eleven.containers.map.associativeArray;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class AssociativeArray<K, V> {
     private Object[][] pairs;
     private int index;
@@ -39,7 +44,12 @@ public class AssociativeArray<K, V> {
 
     // test-drive
     public static void main(String[] args) {
-        AssociativeArray<String, String> map = new AssociativeArray<>(5);
+//        AssociativeArray<String, String> map = new AssociativeArray<>(5);
+        Map<String, String> map;
+//        map = new HashMap<>();
+//        map = new TreeMap<>();
+        map = new LinkedHashMap<>();
+
         map.put("sky", "blue");
         map.put("grass", "green");
         map.put("sun", "hot");
