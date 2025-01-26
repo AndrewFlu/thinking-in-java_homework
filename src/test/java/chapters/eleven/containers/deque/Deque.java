@@ -1,4 +1,4 @@
-package chapters.eleven.containers.set.deque;
+package chapters.eleven.containers.deque;
 
 import java.util.LinkedList;
 

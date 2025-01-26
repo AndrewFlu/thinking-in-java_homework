@@ -1,4 +1,4 @@
-package chapters.eleven.containers.set.queue;
+package chapters.eleven.containers.queue;
 
 import java.util.*;
 
