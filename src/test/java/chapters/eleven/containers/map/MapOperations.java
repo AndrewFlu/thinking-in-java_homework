@@ -8,13 +8,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import static net.midview.Print.print;
 
 public class MapOperations {
-    public static void printKeys(Map<Integer, String> map) {
+    public static void printKeys(Map<Object, Object> map) {
         System.out.print("Size: " + map.size() + ", ");
         System.out.print("Keys: ");
         System.out.println(map.keySet());
     }
 
-    public static void test(Map<Integer, String> map) {
+    public static void test(Map<Object, Object> map) {
         print(map.getClass().getSimpleName());
         map.putAll(new CountingMapData(25));
         // Map реализует поведение 'Set' для ключей
@@ -26,7 +26,7 @@ public class MapOperations {
         System.out.println("map.containsKey(11): " + map.containsKey(11));
         System.out.println("map.get(11): " + map.get(11));
         System.out.println("map.containsValue('F0'): " + map.containsValue("F0"));
-        Integer key = map.keySet().iterator().next();
+        var key = map.keySet().iterator().next();
         System.out.println("First key in map: " + key);
         map.remove(key);
         printKeys(map);
@@ -40,11 +40,12 @@ public class MapOperations {
     }
 
     public static void main(String[] args) {
-        test(new HashMap<Integer, String>());
-        test(new TreeMap<Integer, String>());
+        test(new HashMap<>());
+        test(new TreeMap<>());
         test(new LinkedHashMap<>());
         test(new IdentityHashMap<>());
         test(new ConcurrentHashMap<>());
         test(new WeakHashMap<>());
+        test(new Properties());
     }
 }
