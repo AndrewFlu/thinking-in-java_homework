@@ -1,0 +1,14 @@
+package chapters.eleven.containers.hashes;
+
+public class GroundHog {
+    protected int number;
+
+    public GroundHog(int number) {
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "GroundHog #" + number;
+    }
+}
