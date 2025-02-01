@@ -1,7 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
 import chapters.sixteen.arrays.generators.converttoprimitives.ConvertTo;
-import utils.Generator;
 
 import java.util.Arrays;
 

@@ -1,7 +1,6 @@
 package chapters.fifteen.generics.innerclasses;
 
-import chapters.seven.inheritance.abc.C;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class Customer {
     private static long counter = 1;

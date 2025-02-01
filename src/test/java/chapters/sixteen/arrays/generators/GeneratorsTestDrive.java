@@ -1,6 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class GeneratorsTestDrive {
     private static int size = 5;

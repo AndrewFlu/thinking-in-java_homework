@@ -1,7 +1,7 @@
 package chapters.containers.generators;
 
-import utils.Generator;
-import utils.Pair;
+import net.mindview.utils.Generator;
+import net.mindview.utils.Pair;
 
 import java.util.LinkedHashMap;
 

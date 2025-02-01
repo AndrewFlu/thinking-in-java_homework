@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.cofee;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Iterator;
 import java.util.Random;

@@ -3,7 +3,7 @@ package chapters.sixteen.arrays.search;
 import chapters.sixteen.arrays.generators.Generated;
 import chapters.sixteen.arrays.generators.RandomGenerator;
 import chapters.sixteen.arrays.generators.converttoprimitives.ConvertTo;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Arrays;
 

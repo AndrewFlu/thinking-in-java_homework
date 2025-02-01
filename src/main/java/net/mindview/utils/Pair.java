@@ -1,4 +1,4 @@
-package utils;
+package net.mindview.utils;
 
 public class Pair<K, V> {
     public final K key;

@@ -6,7 +6,7 @@ package chapters.thirteen.strings.replacement;
     the special delimiters, then process the
     extracted block !*/
 
-import utils.TextFile;
+import net.mindview.utils.TextFile;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

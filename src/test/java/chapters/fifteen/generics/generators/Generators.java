@@ -3,7 +3,7 @@ package chapters.fifteen.generics.generators;
 import chapters.fifteen.generics.cofee.Coffee;
 import chapters.fifteen.generics.cofee.CoffeeGenerator;
 import chapters.fifteen.generics.fibonacci.FibonacciGenerator;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.*;
 

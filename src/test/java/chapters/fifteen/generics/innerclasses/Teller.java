@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.innerclasses;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class Teller {
     public static Generator<Teller> generator = new Generator<Teller>() {

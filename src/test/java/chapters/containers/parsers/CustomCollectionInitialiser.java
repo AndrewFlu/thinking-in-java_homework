@@ -1,6 +1,6 @@
 package chapters.containers.parsers;
 
-import utils.TextFile;
+import net.mindview.utils.TextFile;
 
 import java.util.ArrayList;
 import java.util.Arrays;

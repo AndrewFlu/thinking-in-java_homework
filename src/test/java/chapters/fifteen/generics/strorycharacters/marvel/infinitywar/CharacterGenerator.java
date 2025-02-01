@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.strorycharacters.marvel.infinitywar;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Iterator;
 import java.util.Random;

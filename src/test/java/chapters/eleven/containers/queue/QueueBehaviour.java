@@ -1,6 +1,6 @@
 package chapters.eleven.containers.queue;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

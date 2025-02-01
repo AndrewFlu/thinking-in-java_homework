@@ -1,7 +1,7 @@
 package chapters.containers.generators;
 
 import chapters.sixteen.arrays.generators.RandomGenerator;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.factory.examples.cofee;
 
-import utils.TypeCounter;
+import net.mindview.utils.TypeCounter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

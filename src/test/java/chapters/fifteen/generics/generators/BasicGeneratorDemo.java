@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class BasicGeneratorDemo {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.fibonacci;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class FibonacciGenerator implements Generator<Integer> {
     private int count = 0;

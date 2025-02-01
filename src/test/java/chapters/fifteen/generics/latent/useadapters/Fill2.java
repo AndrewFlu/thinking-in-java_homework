@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.latent.useadapters;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.lang.reflect.InvocationTargetException;
 

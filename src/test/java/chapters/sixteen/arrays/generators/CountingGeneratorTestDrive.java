@@ -1,6 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

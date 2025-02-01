@@ -1,7 +1,7 @@
 package chapters.sixteen.arrays.comparing.pattern_strategy;
 
 import chapters.sixteen.arrays.generators.Generated;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Arrays;
 import java.util.Random;

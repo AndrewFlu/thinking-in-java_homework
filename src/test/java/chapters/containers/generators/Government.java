@@ -1,6 +1,6 @@
 package chapters.containers.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class Government implements Generator<String> {
     private int index;

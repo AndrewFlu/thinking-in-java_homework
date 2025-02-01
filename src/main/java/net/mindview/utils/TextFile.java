@@ -1,4 +1,4 @@
-package utils;
+package net.mindview.utils;
 
 import java.io.*;
 import java.util.ArrayList;

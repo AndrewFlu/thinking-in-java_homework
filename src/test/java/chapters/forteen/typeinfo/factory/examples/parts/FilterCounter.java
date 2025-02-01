@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.factory.examples.parts;
 
-import utils.TypeCounter;
+import net.mindview.utils.TypeCounter;
 
 public class FilterCounter {
     public static void main(String[] args) {

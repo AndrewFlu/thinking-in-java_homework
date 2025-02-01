@@ -1,6 +1,6 @@
 package chapters.thirteen.strings.fileparsers;
 
-import utils.TextFile;
+import net.mindview.utils.TextFile;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

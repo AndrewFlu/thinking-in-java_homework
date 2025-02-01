@@ -1,8 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
-import utils.Generator;
-
-import java.math.BigDecimal;
+import net.mindview.utils.Generator;
 
 public class CountingGenerator {
     public static class Boolean implements Generator<java.lang.Boolean> {

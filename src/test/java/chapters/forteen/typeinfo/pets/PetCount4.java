@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.pets;
 
-import utils.TypeCounter;
+import net.mindview.utils.TypeCounter;
 
 public class PetCount4 {
     public static void main(String[] args) {

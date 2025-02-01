@@ -1,6 +1,6 @@
 package chapters.thirteen.strings.grep;
 
-import utils.TextFile;
+import net.mindview.utils.TextFile;
 
 import java.io.File;
 import java.util.HashMap;

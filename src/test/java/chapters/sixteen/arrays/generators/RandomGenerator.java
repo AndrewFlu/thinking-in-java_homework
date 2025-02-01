@@ -1,7 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
-import chapters.sixteen.arrays.comparing.CustomObject;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Random;
 

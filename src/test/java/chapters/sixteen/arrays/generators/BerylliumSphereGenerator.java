@@ -1,7 +1,7 @@
 package chapters.sixteen.arrays.generators;
 
 import chapters.sixteen.arrays.containercomparison.BerylliumSphere;
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class BerylliumSphereGenerator implements Generator<BerylliumSphere> {
     @Override

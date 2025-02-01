@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.complexsystems.store;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.pets;
 
-import utils.MapData;
+import net.mindview.utils.MapData;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
 package chapters.sixteen.arrays.generators.skipgenerator;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class SkipGenerator {
 

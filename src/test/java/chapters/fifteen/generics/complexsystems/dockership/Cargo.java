@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.complexsystems.dockership;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.Random;
 

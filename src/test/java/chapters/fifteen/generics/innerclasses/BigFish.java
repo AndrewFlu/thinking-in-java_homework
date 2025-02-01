@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.innerclasses;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class BigFish {
     public static Generator<BigFish> generator = new Generator<BigFish>() {

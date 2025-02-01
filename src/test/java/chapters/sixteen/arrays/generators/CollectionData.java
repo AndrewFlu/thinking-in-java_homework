@@ -1,6 +1,6 @@
 package chapters.sixteen.arrays.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 import java.util.ArrayList;
 import java.util.Collection;

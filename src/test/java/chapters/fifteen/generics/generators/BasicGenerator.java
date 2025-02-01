@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.generators;
 
-import utils.Generator;
+import net.mindview.utils.Generator;
 
 public class BasicGenerator<T> implements Generator<T> {
     private Class<T> type;

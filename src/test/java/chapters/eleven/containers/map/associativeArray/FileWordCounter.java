@@ -1,6 +1,6 @@
 package chapters.eleven.containers.map.associativeArray;
 
-import utils.TextFile;
+import net.mindview.utils.TextFile;
 
 public class FileWordCounter {
     public static void main(String[] args) {
