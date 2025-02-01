@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static net.midview.Print.print;
 
-public class MapOperations {
+public class Maps {
     public static void printKeys(Map<Object, Object> map) {
         System.out.print("Size: " + map.size() + ", ");
         System.out.print("Keys: ");

@@ -6,8 +6,8 @@ import net.mindview.containers.MapEntry;
 import java.util.*;
 
 public class SlowMap<K, V> extends AbstractMap<K, V> {
-    private List<K> keys = new ArrayList<>();
-    private List<V> values = new ArrayList<>();
+    protected List<K> keys = new ArrayList<>();
+    List<V> values = new ArrayList<>();
 
     public V put(K key, V value) {
         V oldValue = get(key); // Старое значение или null
