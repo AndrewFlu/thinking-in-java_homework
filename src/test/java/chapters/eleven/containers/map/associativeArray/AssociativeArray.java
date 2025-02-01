@@ -1,5 +1,7 @@
 package chapters.eleven.containers.map.associativeArray;
 
+import chapters.eleven.containers.map.slowmap.SlowMap;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -48,7 +50,8 @@ public class AssociativeArray<K, V> {
         Map<String, String> map;
 //        map = new HashMap<>();
 //        map = new TreeMap<>();
-        map = new LinkedHashMap<>();
+//        map = new LinkedHashMap<>();
+        map = new SlowMap<>();
 
         map.put("sky", "blue");
         map.put("grass", "green");
