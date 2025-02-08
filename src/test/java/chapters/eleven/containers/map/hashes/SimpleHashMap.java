@@ -27,6 +27,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
             if (iPair.getKey().equals(key)) {
                 oldValue = iPair.getValue();
                 it.set(pair); // заменяем старое значение новым
+                System.out.printf("Value for key[%s] has been changed to: %s%n", pair.getKey(), pair.getValue());
                 found = true;
                 break;
             }
