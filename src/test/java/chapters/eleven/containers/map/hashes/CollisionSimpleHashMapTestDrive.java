@@ -11,6 +11,8 @@ public class CollisionSimpleHashMapTestDrive {
         Map<String, String> dupleCountries = Countries.countries(5);
         map.putAll(countries);
         map.putAll(dupleCountries);
+        map.put("BULGARIA", "12345");
+
         System.out.println(map);
     }
 }

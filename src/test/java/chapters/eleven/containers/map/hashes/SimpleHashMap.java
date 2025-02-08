@@ -8,26 +8,32 @@ import java.util.*;
 public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     // В качестве размера хеш-таблицы следует выбирать
     // простое число, чтобы обеспечить равномерность распределения:
-    static final int SIZE = 997;
+    static final int SIZE = 3;
     // Физический массив обобщений создать нельзя, но можно
     // прийти к нему через восходящее преобразование
     LinkedList<MapEntry<K, V>>[] buckets = new LinkedList[SIZE];
 
     public V put(K key, V value) {
         V oldValue = null;
+        boolean hasCollision = false;
+
         int index = Math.abs(key.hashCode()) % SIZE;
         if (buckets[index] == null)
             buckets[index] = new LinkedList<MapEntry<K, V>>();
+        else
+            hasCollision = true;
+
         LinkedList<MapEntry<K, V>> bucket = buckets[index];
         MapEntry<K, V> pair = new MapEntry<>(key, value);
         boolean found = false;
         ListIterator<MapEntry<K, V>> it = bucket.listIterator();
         while (it.hasNext()) {
             MapEntry<K, V> iPair = it.next();
+
             if (iPair.getKey().equals(key)) {
                 oldValue = iPair.getValue();
                 it.set(pair); // заменяем старое значение новым
-                System.out.printf("Value for key[%s] has been changed to: %s%n", pair.getKey(), pair.getValue());
+//                System.out.printf("Value for key[%s] has been changed to: %s%n", pair.getKey(), pair.getValue());
                 found = true;
                 break;
             }
@@ -35,6 +41,11 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
         if (!found)
             buckets[index].add(pair);
+
+        if (hasCollision) {
+            String collisionMessage = String.format("Collision while adding [%s] with [%d] elements: %s", pair, buckets[index].size(), buckets[index]);
+            System.out.println(collisionMessage);
+        }
 
         return oldValue;
     }
