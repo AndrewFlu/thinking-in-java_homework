@@ -73,6 +73,27 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         return set;
     }
 
+    @Override
+    public void clear() {
+        buckets = new LinkedList[SIZE];
+    }
+
+    @Override
+    public V remove(Object key) {
+        if (containsKey(key)) {
+            int index = Math.abs(key.hashCode()) % SIZE;
+            LinkedList<MapEntry<K, V>> bucketElements = buckets[index];
+            for (MapEntry<K, V> entry : bucketElements) {
+                if (entry.getKey().equals(key)) {
+                    bucketElements.remove(entry);
+                    return entry.getValue();
+                }
+            }
+        }
+
+        throw new NullPointerException("The key is not found: " + key);
+    }
+
     // test-drive
     public static void main(String[] args) {
         SimpleHashMap<String, String> simpleHashMap = new SimpleHashMap<>();
@@ -80,5 +101,10 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         System.out.println(simpleHashMap);
         System.out.println(simpleHashMap.get("HUNGARY"));
         System.out.println(simpleHashMap.entrySet());
+
+        simpleHashMap.remove("EGYPT");
+        System.out.println(simpleHashMap);
+        simpleHashMap.clear();
+        System.out.println(simpleHashMap);
     }
 }
