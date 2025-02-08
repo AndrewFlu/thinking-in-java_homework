@@ -4,6 +4,7 @@ import chapters.containers.countries.Countries;
 import net.mindview.containers.MapEntry;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
 public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     // В качестве размера хеш-таблицы следует выбирать
@@ -94,6 +95,12 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         throw new NullPointerException("The key is not found: " + key);
     }
 
+    @Override
+    public V getOrDefault(Object key, V defaultValue) {
+        V result = get(key);
+        return result == null ? defaultValue : result;
+    }
+
     // test-drive
     public static void main(String[] args) {
         SimpleHashMap<String, String> simpleHashMap = new SimpleHashMap<>();
@@ -101,10 +108,13 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         System.out.println(simpleHashMap);
         System.out.println(simpleHashMap.get("HUNGARY"));
         System.out.println(simpleHashMap.entrySet());
-
-        simpleHashMap.remove("EGYPT");
+//
+//        simpleHashMap.remove("EGYPT");
+//        System.out.println(simpleHashMap);
+//        simpleHashMap.clear();
         System.out.println(simpleHashMap);
-        simpleHashMap.clear();
+        System.out.println(simpleHashMap.getOrDefault("Windows", "10"));
+        simpleHashMap.merge("ARABIA", "OAE", (s, s2) -> String.format("%s / %s", s, s2));
         System.out.println(simpleHashMap);
     }
 }
