@@ -10,9 +10,11 @@ public class CountedString {
     private static List<String> created = new ArrayList<>();
     private String s;
     private int id = 0;
+    private char symbol;
 
     public CountedString(String s) {
         this.s = s;
+        this.symbol = (s.isEmpty() ? 'X' : s.charAt(0));
         created.add(s);
         // id — общее количество экземпляров данной строки, используемых классом CountedString
         for (String str : created)
@@ -22,7 +24,7 @@ public class CountedString {
 
     @Override
     public String toString() {
-        return "String: " + s + ", id: " + id +
+        return "String: " + s + ", id: " + id + ", firstSymbol: " + symbol +
                 ", hashCode(): " + hashCode() + "; ";
     }
 
@@ -34,6 +36,7 @@ public class CountedString {
         int result = 17;
         result = 37 * result + s.hashCode();
         result = 37 * result + id;
+        result = 37 * result + (int)symbol;
 
         return result;
     }
@@ -42,7 +45,8 @@ public class CountedString {
     public boolean equals(Object arg) {
         return arg instanceof CountedString &&
                 s.equals(((CountedString) arg).s) &&
-                id == ((CountedString) arg).id;
+                id == ((CountedString) arg).id &&
+                symbol == ((CountedString) arg).symbol;
     }
 
     public static void main(String[] args) {
