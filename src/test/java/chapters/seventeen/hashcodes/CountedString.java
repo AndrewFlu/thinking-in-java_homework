@@ -1,4 +1,4 @@
-package chapters.eleven.containers.hashcodes;
+package chapters.seventeen.hashcodes;
 
 import java.util.ArrayList;
 import java.util.HashMap;

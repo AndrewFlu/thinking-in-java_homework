@@ -1,4 +1,4 @@
-package chapters.eleven.containers.hashcodes;
+package chapters.seventeen.hashcodes;
 
 public class StringHashCode {
     public static void main(String[] args) {
