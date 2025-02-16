@@ -24,8 +24,11 @@ public class CountedString {
 
     @Override
     public String toString() {
-        return "String: " + s + ", id: " + id + ", firstSymbol: " + symbol +
-                ", hashCode(): " + hashCode() + "; ";
+        return "String: " + s +
+                ", id: " + id +
+                ", firstSymbol: " + symbol +
+                ", hashCode(): " + hashCode() +
+                "; ";
     }
 
     @Override
@@ -35,7 +38,7 @@ public class CountedString {
         // по рецепту Джошуа Блока
         int result = 17;
         result = 37 * result + s.hashCode();
-        result = 37 * result + id;
+//        result = 37 * result + id;
         result = 37 * result + (int)symbol;
 
         return result;
@@ -57,6 +60,8 @@ public class CountedString {
             map.put(cs[i], i);
         }
         System.out.println(map);
+
+        // Проблема: hashCode одинаковый для разных объектов
         for (CountedString cString : cs) {
             System.out.println("Look up " + cString);
             System.out.println(map.get(cString));
