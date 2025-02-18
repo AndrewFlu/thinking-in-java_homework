@@ -9,11 +9,14 @@ import static chapters.fifteen.generics.tuples.inferedtypes.Tuple.tuple;
 
 public class TupleTest2 {
     public static void main(String[] args) {
-        TwoTuple<String, Integer> ttsi = func();
-        System.out.println(ttsi);
+        TwoTuple<String, Integer> func = func();
+        TwoTuple func2 = func2();
+        System.out.println(func);
+        System.out.println(func2);
 
-        TwoTuple<String, Integer> ttsi2 = func2();
-        System.out.println(ttsi2);
+        System.out.println();
+        System.out.println("func() == func2() ? " + func.equals(func2));
+        System.out.println();
         System.out.println(g());
         System.out.println(h());
         System.out.println(k());
@@ -37,7 +40,7 @@ public class TupleTest2 {
     }
 
     private static TwoTuple func2() {
-        return tuple("Hi!", 101);
+        return tuple("Yo", 51);
     }
 
     private static TwoTuple<String, Integer> func() {
