@@ -24,12 +24,12 @@ public class Tester<C> {
     }
 
     private static String numberField() {
-        return "%s" + fieldWidth + "d";
+        return "%" + fieldWidth + "d";
     }
 
     private static int sizeWidth = 5;
 
-    private static String sizeField = "%s" + sizeWidth + "s";
+    private static String sizeField = "%" + sizeWidth + "s";
 
     private TestParam[] paramList = defaultParams;
 
