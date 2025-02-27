@@ -89,12 +89,20 @@ public class ListPerformance {
             }
         });
 
-//        tests.add(new Test<List<String>>("sort") {
-//            @Override
-//            int test(List<String> container, TestParam tp) {
-//
-//            }
-//        });
+        tests.add(new Test<List<String>>("sort") {
+            @Override
+            int test(List<String> container, TestParam tp) {
+                int loops = tp.loops;
+                int size = tp.size;
+                for (int i = 0; i < loops; i++) {
+                    container.clear();
+                    container.addAll(CollectionData.list(new CountingGenerator.String(), size));
+                    Collections.sort(container);
+                }
+
+                return loops * size;
+            }
+        });
 
         // remove
         tests.add(new Test<List<String>>("remove") {
