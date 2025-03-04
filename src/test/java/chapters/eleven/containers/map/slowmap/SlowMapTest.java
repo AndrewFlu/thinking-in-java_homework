@@ -6,5 +6,6 @@ public class SlowMapTest {
     public static void main(String[] args) {
         Maps.test(new SlowMap<>());
         Maps.test(new CorrectedSlowMap<>());
+        Maps.test(new SlowMapWithOneArray<>());
     }
 }
