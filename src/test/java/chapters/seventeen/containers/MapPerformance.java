@@ -1,5 +1,8 @@
 package chapters.seventeen.containers;
 
+import chapters.eleven.containers.map.slowmap.SlowMapWithModifiedPut;
+import chapters.eleven.containers.map.slowmap.SlowMapWithOneArray;
+
 import java.util.*;
 
 public class MapPerformance {
@@ -60,5 +63,7 @@ public class MapPerformance {
         Tester.run(new IdentityHashMap<>(), tests);
         Tester.run(new WeakHashMap<>(), tests);
         Tester.run(new Hashtable<>(), tests);
+        Tester.run(new SlowMapWithOneArray<>(), tests);
+        Tester.run(new SlowMapWithModifiedPut<>(), tests);
     }
 }
