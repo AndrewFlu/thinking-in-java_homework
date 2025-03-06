@@ -1,9 +1,12 @@
 package chapters.seventeen.containers;
 
-import chapters.eleven.containers.map.slowmap.SlowMapWithModifiedPut;
-import chapters.eleven.containers.map.slowmap.SlowMapWithOneArray;
+import chapters.eleven.containers.map.hashes.SimpleHashMap;
+import chapters.eleven.containers.map.hashes.SimpleHashMapWithArrayList;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 public class MapPerformance {
     static List<Test<Map<Integer, Integer>>> tests =
@@ -57,13 +60,15 @@ public class MapPerformance {
     public static void main(String[] args) {
         if (args.length > 0)
             Tester.defaultParams = TestParam.array(args);
-        Tester.run(new TreeMap<>(), tests);
-        Tester.run(new HashMap<>(), tests);
-        Tester.run(new LinkedHashMap<>(), tests);
-        Tester.run(new IdentityHashMap<>(), tests);
-        Tester.run(new WeakHashMap<>(), tests);
-        Tester.run(new Hashtable<>(), tests);
-        Tester.run(new SlowMapWithOneArray<>(), tests);
-        Tester.run(new SlowMapWithModifiedPut<>(), tests);
+        Tester.run(new SimpleHashMap<>(), tests);
+        Tester.run(new SimpleHashMapWithArrayList<>(), tests);
+//        Tester.run(new TreeMap<>(), tests);
+//        Tester.run(new HashMap<>(), tests);
+//        Tester.run(new LinkedHashMap<>(), tests);
+//        Tester.run(new IdentityHashMap<>(), tests);
+//        Tester.run(new WeakHashMap<>(), tests);
+//        Tester.run(new Hashtable<>(), tests);
+//        Tester.run(new SlowMapWithOneArray<>(), tests);
+//        Tester.run(new SlowMapWithModifiedPut<>(), tests);
     }
 }

@@ -3,15 +3,16 @@ package chapters.eleven.containers.map.hashes;
 import chapters.containers.countries.Countries;
 import net.mindview.containers.MapEntry;
 
+import java.sql.Array;
 import java.util.*;
 
-public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
+public class SimpleHashMapWithArrayList<K, V> extends AbstractMap<K, V> {
     // В качестве размера хеш-таблицы следует выбирать
     // простое число, чтобы обеспечить равномерность распределения:
     static final int SIZE = 997;
     // Физический массив обобщений создать нельзя, но можно
     // прийти к нему через восходящее преобразование
-    LinkedList<MapEntry<K, V>>[] buckets = new LinkedList[SIZE];
+    ArrayList<MapEntry<K, V>>[] buckets = new ArrayList[SIZE];
 
     public V put(K key, V value) {
         V oldValue = null;
@@ -19,11 +20,11 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
         int index = Math.abs(key.hashCode()) % SIZE;
         if (buckets[index] == null)
-            buckets[index] = new LinkedList<MapEntry<K, V>>();
+            buckets[index] = new ArrayList<MapEntry<K, V>>();
         else
             hasCollision = true;
 
-        LinkedList<MapEntry<K, V>> bucket = buckets[index];
+        ArrayList<MapEntry<K, V>> bucket = buckets[index];
         MapEntry<K, V> pair = new MapEntry<>(key, value);
         boolean found = false;
         ListIterator<MapEntry<K, V>> it = bucket.listIterator();
@@ -33,15 +34,12 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
             if (iPair.getKey().equals(key)) {
                 oldValue = iPair.getValue();
                 it.set(pair); // заменяем старое значение новым
-//                System.out.printf("Value for key[%s] has been changed to: %s%n", pair.getKey(), pair.getValue());
                 found = true;
                 break;
             }
         }
-
         if (!found)
             buckets[index].add(pair);
-
         if (hasCollision) {
             String collisionMessage = String.format("Collision while adding [%s] with [%d] elements: %s", pair, buckets[index].size(), buckets[index]);
             System.out.println(collisionMessage);
@@ -63,26 +61,24 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
     public Set<Map.Entry<K, V>> entrySet() {
         Set<Map.Entry<K, V>> set = new HashSet<Map.Entry<K, V>>();
-        for (LinkedList<MapEntry<K, V>> bucket : buckets) {
-            if (bucket == null)
-                continue;
+        for (ArrayList<MapEntry<K, V>> bucket : buckets) {
+            if (bucket == null) continue;
             for (MapEntry<K, V> mPair : bucket)
                 set.add(mPair);
         }
-
         return set;
     }
 
     @Override
     public void clear() {
-        buckets = new LinkedList[SIZE];
+        buckets = new ArrayList[SIZE];
     }
 
     @Override
     public V remove(Object key) {
         if (containsKey(key)) {
             int index = Math.abs(key.hashCode()) % SIZE;
-            LinkedList<MapEntry<K, V>> bucketElements = buckets[index];
+            ArrayList<MapEntry<K, V>> bucketElements = buckets[index];
             for (MapEntry<K, V> entry : bucketElements) {
                 if (entry.getKey().equals(key)) {
                     bucketElements.remove(entry);
@@ -102,7 +98,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
 
     // test-drive
     public static void main(String[] args) {
-        SimpleHashMap<String, String> simpleHashMap = new SimpleHashMap<>();
+        SimpleHashMapWithArrayList<String, String> simpleHashMap = new SimpleHashMapWithArrayList<>();
         simpleHashMap.putAll(Countries.countries(10));
         System.out.println(simpleHashMap);
         System.out.println(simpleHashMap.get("HUNGARY"));
