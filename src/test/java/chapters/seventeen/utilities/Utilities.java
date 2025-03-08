@@ -1,0 +1,51 @@
+package chapters.seventeen.utilities;
+
+import java.util.*;
+
+import static net.midview.Print.print;
+
+public class Utilities {
+    static List<String> list = Arrays.asList(
+            "one Two three Four five six one".split(" "));
+
+    public static void main(String[] args) {
+        System.out.println(list);
+        System.out.println("'list' disjoint (Four)?: " + Collections.disjoint(list, Collections.singletonList("Four")));
+        System.out.println("max(): " + Collections.max(list));
+        System.out.println("min(): " + Collections.min(list));
+        System.out.println("max w/ comparator: " + Collections.max(list, String.CASE_INSENSITIVE_ORDER));
+        System.out.println("min w/ comparator: " + Collections.min(list, String.CASE_INSENSITIVE_ORDER));
+
+        List<String> sublist = Arrays.asList("Four five six".split(" "));
+        System.out.println("indexOfSublist(): " + Collections.indexOfSubList(list, sublist));
+        System.out.println("lastIndexOfSubList(): " + Collections.lastIndexOfSubList(list, sublist));
+        Collections.replaceAll(list, "one", "Yo");
+        System.out.println("replaceAll(): " + list);
+        Collections.reverse(list);
+        System.out.println("reverse(): " + list);
+        Collections.rotate(list, 3);
+        System.out.println("rotate(): " + list);
+        List<String> source = Arrays.asList("in the matrix".split(" "));
+        Collections.copy(list, source);
+        print("copy(): " + list);
+        Collections.swap(list, 0, list.size() - 1);
+        print("swap(): " + list);
+        Collections.shuffle(list, new Random(47));
+        print("shuffled: " + list);
+        Collections.fill(list, "pop");
+        print("fill(): " + list);
+        System.out.println("frequency of 'pop': " + Collections.frequency(list, "pop"));
+        List<String> dups = Collections.nCopies(3, "snap");
+        System.out.println("dups: " + dups);
+        System.out.println("'list' disjoint 'dups'?: " + Collections.disjoint(list, dups));
+        // получение enumeration в старом стиле
+        Enumeration<String> e = Collections.enumeration(dups);
+        Vector<String> v = new Vector<>();
+        while (e.hasMoreElements())
+            v.addElement(e.nextElement());
+
+        // преобразование vector "в старом стиле" в List с использованием Enumeration
+        ArrayList<String> arrayList = Collections.list(v.elements());
+        System.out.println("arrayList: " + arrayList);
+    }
+}
