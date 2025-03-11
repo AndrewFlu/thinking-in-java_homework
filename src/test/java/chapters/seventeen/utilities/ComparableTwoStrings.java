@@ -15,12 +15,19 @@ public class ComparableTwoStrings implements Comparable<ComparableTwoStrings> {
 
     @Override
     public String toString() {
-        return first + " & " + second;
+        return "'" + first + " & " + second + "'";
     }
 
     @Override
     public int compareTo(ComparableTwoStrings o) {
         return first.compareTo(o.first);
+    }
+
+    static void printArray(ComparableTwoStrings[] sa) {
+        System.out.print("(");
+        for (int i = 0; i < sa.length; i++)
+            System.out.print(sa[i] + ", ");
+        System.out.println(sa[sa.length - 1] + ")");
     }
 
     public static class SecondComparator implements Comparator<ComparableTwoStrings> {
