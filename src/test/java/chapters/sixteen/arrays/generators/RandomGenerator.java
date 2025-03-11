@@ -123,4 +123,18 @@ public class RandomGenerator {
             return new chapters.sixteen.arrays.comparing.CustomObject(random.nextInt(bound));
         }
     }
+
+    public static class StringComparable extends CountingGenerator.String {
+        // Plug in the random Character generator:
+        {
+            characterGenerator = new Character();
+        }
+
+        public StringComparable() {
+        }
+
+        public StringComparable(int length) {
+            super(length);
+        }
+    }
 }
