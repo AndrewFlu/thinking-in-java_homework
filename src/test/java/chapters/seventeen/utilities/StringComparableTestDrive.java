@@ -49,5 +49,10 @@ public class StringComparableTestDrive {
         i = Collections.binarySearch(list, key);
         System.out.println("found key in index: " + i);
         System.out.println();
+
+        System.out.println();
+        System.out.println("natural sorting:");
+        Collections.sort(list, ComparableTwoStrings.CASE_INSENSITIVE_ORDER_BY_FIRST_STRING);
+        System.out.println("list: " + list);
     }
 }

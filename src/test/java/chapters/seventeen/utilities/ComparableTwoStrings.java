@@ -7,6 +7,7 @@ public class ComparableTwoStrings implements Comparable<ComparableTwoStrings> {
     private String second;
 
     public static final Comparator<ComparableTwoStrings> SECOND_COMPARATOR = new SecondComparator();
+    public static final Comparator<ComparableTwoStrings> CASE_INSENSITIVE_ORDER_BY_FIRST_STRING = new CaseInsensitiveComparator();
 
     public ComparableTwoStrings(String first, String second) {
         this.first = first;
@@ -35,6 +36,13 @@ public class ComparableTwoStrings implements Comparable<ComparableTwoStrings> {
         @Override
         public int compare(ComparableTwoStrings o1, ComparableTwoStrings o2) {
             return o1.second.compareTo(o2.second);
+        }
+    }
+
+    private static class CaseInsensitiveComparator implements Comparator<ComparableTwoStrings> {
+        @Override
+        public int compare(ComparableTwoStrings o1, ComparableTwoStrings o2) {
+            return o1.first.compareToIgnoreCase(o2.first);
         }
     }
 }
