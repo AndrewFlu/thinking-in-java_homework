@@ -1,5 +1,7 @@
 package chapters.eighteen.input_optput.directory;
 
+import net.mindview.utils.PPrint;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
@@ -43,9 +45,9 @@ public final class Directory {
         }
 
         public String toString() {
-            return "dirs: " + dirs +
+            return "dirs: " + PPrint.pformat(dirs) +
                     "\n\n" +
-                    "files: " + files;
+                    "files: " + PPrint.pformat(files);
         }
     }
 
