@@ -19,12 +19,19 @@ public class DirectoryDemo {
             System.out.println(file);
         print("----------------------");
 
+        System.out.println("Files starts with [Dd]: ");
         // Все файлы Java, имена которых начинаются с "D"
-        for (File file : Directory.walk(PATH, "[Dd].*\\.java"))
+        long fileSize = 0;
+        for (File file : Directory.walk(PATH, "[Dd].*\\.java")) {
             System.out.println(file);
+            fileSize += file.length();
+        }
+
+        System.out.println("Total size for all files starts with [Dd]: " + fileSize + " bytes");
         print("======================");
 
         // Файлы классов, имена которых содержат "Z" или "z"
+        System.out.println("Files starts with [Zz]: ");
         for (File file : Directory.walk(PATH, ".*[Zz].*\\.class"))
             System.out.println(file);
     }
