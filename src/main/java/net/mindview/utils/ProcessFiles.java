@@ -10,11 +10,11 @@ public class ProcessFiles {
     }
 
     private Strategy strategy;
-    private String ext;
+    private String regex;
 
-    public ProcessFiles(Strategy strategy, String ext) {
+    public ProcessFiles(Strategy strategy, String regex) {
         this.strategy = strategy;
-        this.ext = ext;
+        this.regex = regex;
     }
 
     public void start(String[] args) {
@@ -26,11 +26,11 @@ public class ProcessFiles {
                     File fileArg = new File(arg);
                     if (fileArg.isDirectory())
                         processDirectoryTree(fileArg);
-                    else
-                        // разрешить пользователю не указывать расширение:
-                    if (!arg.endsWith("." + ext))
-                        arg +="." + ext;
-                    strategy.process(new File(arg).getCanonicalFile());
+                    else if (arg.matches(regex))
+//                        // разрешить пользователю не указывать расширение:
+//                    if (!arg.endsWith("." + ext))
+//                        arg +="." + ext;
+                    strategy.process(fileArg.getCanonicalFile());
                 }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -38,7 +38,7 @@ public class ProcessFiles {
     }
 
     public void processDirectoryTree(File root) throws IOException {
-        for (File file : Directory.walk(root.getAbsolutePath(), ".*\\." + ext))
+        for (File file : Directory.walk(root.getAbsolutePath(), regex))
             strategy.process(file.getCanonicalFile());
     }
 }

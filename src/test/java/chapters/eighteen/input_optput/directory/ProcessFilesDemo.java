@@ -11,6 +11,6 @@ public class ProcessFilesDemo {
             public void process(File file) {
                 System.out.println(file);
             }
-        }, "java").start(args);
+        }, ".*\\.java").start(args);
     }
 }
