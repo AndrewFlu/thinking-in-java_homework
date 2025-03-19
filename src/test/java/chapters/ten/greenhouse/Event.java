@@ -3,7 +3,7 @@ package chapters.ten.greenhouse;
 /**
  * Общие для всякого управляющего события методы
  */
-abstract class Event {
+public abstract class Event {
     private long eventTime;
     protected final long delayTime;
 

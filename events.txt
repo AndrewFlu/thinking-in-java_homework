@@ -1,0 +1,7 @@
+Bell(900)
+ThermostatNight(100)
+LightOn(300)
+LightOff(350)
+WaterOn(600)
+WaterOff(700)
+ThermostatDay(1400)
