@@ -26,7 +26,7 @@ public class Blip3 implements Externalizable {
     @Override
     public void writeExternal(ObjectOutput out) throws IOException {
         System.out.println("Blip3.writeExternal()");
-        // обязательные действия
+        // обязательные действия (иначе будут проинициализирвоаны дефолтные значения класса (null для s и 0 для i))
         out.writeObject(s);
         out.writeInt(i);
     }
@@ -34,7 +34,7 @@ public class Blip3 implements Externalizable {
     @Override
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
         System.out.println("Blip3.writeExternal()");
-        // обязательные действия
+        // обязательные действия (иначе будут проинициализирвоаны дефолтные значения класса (null для s и 0 для i))
         s = (String) in.readObject();
         i = in.readInt();
     }
@@ -51,9 +51,5 @@ public class Blip3 implements Externalizable {
         System.out.println("Recovering b3:");
         b3 = (Blip3) in.readObject();
         System.out.println(b3);
-
-
-
-
     }
 }
