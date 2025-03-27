@@ -4,7 +4,7 @@ import chapters.sixteen.arrays.generators.Generated;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ComparatorTest {
     public static void main(String[] args) {

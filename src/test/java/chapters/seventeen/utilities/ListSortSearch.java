@@ -2,7 +2,7 @@ package chapters.seventeen.utilities;
 
 import java.util.*;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ListSortSearch {
     public static void main(String[] args) {

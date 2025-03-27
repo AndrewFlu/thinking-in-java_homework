@@ -5,7 +5,7 @@ import net.mindview.utils.PPrint;
 
 import java.io.File;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class DirectoryDemo {
 

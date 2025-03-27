@@ -1,6 +1,6 @@
 package chapters.thirteen.strings;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Replacing {
     static String s = Splitting.knights;

@@ -2,7 +2,7 @@ package chapters.eleven.containers.list;
 
 import java.util.*;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ListFeatures {
     public static void main(String[] args) {

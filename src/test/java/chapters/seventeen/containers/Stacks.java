@@ -4,7 +4,7 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Stacks {
     public static void main(String[] args) {

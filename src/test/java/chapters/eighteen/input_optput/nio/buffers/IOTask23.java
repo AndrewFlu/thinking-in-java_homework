@@ -2,7 +2,7 @@ package chapters.eighteen.input_optput.nio.buffers;
 
 import java.nio.CharBuffer;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class IOTask23 {
     public static void main(String[] args) {

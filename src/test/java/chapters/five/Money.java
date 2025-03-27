@@ -1,7 +1,7 @@
 package chapters.five;
 
 import static chapters.five.MoneyType.*;
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Money {
     private final MoneyType type;

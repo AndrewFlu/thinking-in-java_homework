@@ -1,6 +1,6 @@
 package chapters.five;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Book {
     public String label;

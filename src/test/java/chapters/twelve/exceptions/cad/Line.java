@@ -2,7 +2,7 @@ package chapters.twelve.exceptions.cad;
 
 import chapters.eight.shapes.Shape;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Line extends Shape {
     private int start, end;

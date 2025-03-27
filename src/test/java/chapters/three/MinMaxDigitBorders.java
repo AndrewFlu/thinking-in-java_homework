@@ -1,7 +1,7 @@
 package chapters.three;
 
 import static java.lang.String.format;
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class MinMaxDigitBorders {
     private static final Double MAX_DOUBLE = Double.MAX_VALUE;

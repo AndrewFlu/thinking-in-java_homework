@@ -1,7 +1,7 @@
 package chapters.three;
 
 import static chapters.three.Hexademical.*;
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class UnaryOperators {
     public static int ONE = 1;

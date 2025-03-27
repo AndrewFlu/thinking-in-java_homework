@@ -1,6 +1,6 @@
 package chapters.five.overloading;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SameTypesDifferentOrder {
     int high;

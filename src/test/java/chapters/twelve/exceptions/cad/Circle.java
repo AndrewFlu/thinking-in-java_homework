@@ -1,6 +1,6 @@
 package chapters.twelve.exceptions.cad;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Circle extends Shape {
 

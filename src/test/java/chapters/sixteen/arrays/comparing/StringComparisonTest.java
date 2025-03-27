@@ -1,13 +1,12 @@
 package chapters.sixteen.arrays.comparing;
 
-import chapters.sixteen.arrays.generators.CollectionData;
 import chapters.sixteen.arrays.generators.Generated;
 import chapters.sixteen.arrays.generators.RandomGenerator;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class StringComparisonTest {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.toys;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ToyTest {
     static void printInfo(Class cc) {

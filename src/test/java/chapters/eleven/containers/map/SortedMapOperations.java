@@ -5,7 +5,7 @@ import chapters.containers.lightweight.CountingMapData;
 import java.util.Iterator;
 import java.util.TreeMap;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SortedMapOperations {
     public static void main(String[] args) {

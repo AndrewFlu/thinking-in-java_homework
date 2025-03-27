@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class MapOfList {
     public static Map<Person, List<? extends Pet>>

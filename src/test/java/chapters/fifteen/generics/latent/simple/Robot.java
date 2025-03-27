@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.latent.simple;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Robot implements Performs{
     @Override

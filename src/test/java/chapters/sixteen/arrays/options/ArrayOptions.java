@@ -4,7 +4,7 @@ import chapters.sixteen.arrays.containercomparison.BerylliumSphere;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ArrayOptions {
     public static void main(String[] args) {

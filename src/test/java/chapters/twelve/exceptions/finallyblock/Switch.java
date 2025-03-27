@@ -1,6 +1,6 @@
 package chapters.twelve.exceptions.finallyblock;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Switch {
     private boolean state = false;

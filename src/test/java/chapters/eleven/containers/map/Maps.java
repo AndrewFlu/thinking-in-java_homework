@@ -5,7 +5,7 @@ import chapters.containers.lightweight.CountingMapData;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Maps {
     public static void printKeys(Map<Object, Object> map) {

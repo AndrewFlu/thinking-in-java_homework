@@ -1,6 +1,6 @@
 package chapters.seven.reusing;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class InsectTestDrive {
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class IOTask25 {
     public static File toDirect(File f) throws IOException {

@@ -1,6 +1,6 @@
 package chapters.three;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ShiftExamples {
     private static final int HIGH = 0xffff;

@@ -6,7 +6,7 @@ import net.mindview.utils.Generator;
 import java.util.Arrays;
 import java.util.Random;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class CompType implements Comparable<CompType> {
     private static int count = 1;

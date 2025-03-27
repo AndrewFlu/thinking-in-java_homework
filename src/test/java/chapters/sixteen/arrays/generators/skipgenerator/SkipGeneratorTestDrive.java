@@ -5,7 +5,7 @@ import chapters.sixteen.arrays.generators.converttoprimitives.ConvertTo;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SkipGeneratorTestDrive {
     public static void main(String[] args) {

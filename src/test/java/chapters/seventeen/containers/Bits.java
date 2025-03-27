@@ -3,7 +3,7 @@ package chapters.seventeen.containers;
 import java.util.BitSet;
 import java.util.Random;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Bits {
     public static void printBitSet(BitSet bitSet) {

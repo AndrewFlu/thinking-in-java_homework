@@ -2,7 +2,7 @@ package chapters.fifteen.generics.latent.reflection;
 
 import java.lang.reflect.Method;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class CommunicateReflectively {
     public static void perform(Object speaker) {

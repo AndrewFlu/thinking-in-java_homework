@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.sweetshop;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Cookie {
     static {

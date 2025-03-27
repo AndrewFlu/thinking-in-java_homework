@@ -2,7 +2,7 @@ package chapters.sixteen.arrays.copying;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class CopyingArray {
     public static void main(String[] args) {

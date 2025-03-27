@@ -1,6 +1,6 @@
 package chapters.six.packageprivate;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Engine {
     private int baseId;

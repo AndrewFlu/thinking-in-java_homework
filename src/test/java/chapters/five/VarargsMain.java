@@ -1,6 +1,6 @@
 package chapters.five;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class VarargsMain {
     public static void main(String... args) {

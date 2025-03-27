@@ -2,7 +2,7 @@ package chapters.sixteen.arrays.comparing;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ComparingArrays {
     public static void main(String[] args) {

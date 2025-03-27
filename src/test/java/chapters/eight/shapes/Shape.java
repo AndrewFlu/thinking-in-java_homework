@@ -1,6 +1,6 @@
 package chapters.eight.shapes;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Shape {
     public Shape(int i) {

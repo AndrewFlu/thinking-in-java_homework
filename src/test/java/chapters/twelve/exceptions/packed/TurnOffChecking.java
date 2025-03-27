@@ -3,7 +3,7 @@ package chapters.twelve.exceptions.packed;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class TurnOffChecking {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package chapters.four;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class CheckBoundary {
     public static void main(String[] args) {

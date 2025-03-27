@@ -1,6 +1,6 @@
 package chapters.five.sto;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class TechnicalCenter {
     public boolean repair(Car car) {

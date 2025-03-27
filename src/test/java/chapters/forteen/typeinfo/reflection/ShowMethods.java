@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ShowMethods {
     private static String usage = "usage: \n" +

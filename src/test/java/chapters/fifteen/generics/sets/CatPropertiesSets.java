@@ -5,7 +5,7 @@ import java.util.Set;
 
 import static chapters.fifteen.generics.sets.CatProperties.*;
 import static chapters.fifteen.generics.sets.Sets.*;
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 
 public class CatPropertiesSets {

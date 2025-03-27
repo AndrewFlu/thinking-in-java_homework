@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.instanceofvsclass;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class FamilyVsExactType {
     static void test(Object x) {

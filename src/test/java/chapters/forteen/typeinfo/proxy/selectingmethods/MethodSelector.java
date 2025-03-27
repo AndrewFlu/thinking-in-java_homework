@@ -3,7 +3,7 @@ package chapters.forteen.typeinfo.proxy.selectingmethods;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class MethodSelector implements InvocationHandler {
     private final Object proxied;

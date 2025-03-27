@@ -1,6 +1,6 @@
 package chapters.six.packageprivate;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class InnerEngineTestDrive {
     public static void main(String[] args) {

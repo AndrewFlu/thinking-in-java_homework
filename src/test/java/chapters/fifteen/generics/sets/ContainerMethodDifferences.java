@@ -3,7 +3,7 @@ package chapters.fifteen.generics.sets;
 import java.lang.reflect.Method;
 import java.util.*;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ContainerMethodDifferences {
 

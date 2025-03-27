@@ -1,6 +1,6 @@
 package chapters.seven.reusing;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class MayBeetle extends Beetle {
     private static int x3 = printInit("Поле static MayBeetle.x3 инициализировано");

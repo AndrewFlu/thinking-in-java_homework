@@ -2,7 +2,7 @@ package chapters.seventeen.utilities;
 
 import java.util.*;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Utilities {
     static List<String> list = Arrays.asList(

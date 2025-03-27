@@ -2,7 +2,7 @@ package chapters.forteen.typeinfo.interfaceviolation.anonymous;
 
 import chapters.forteen.typeinfo.interfaceviolation.A;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class AnonymousA {
     public static A makeA() {

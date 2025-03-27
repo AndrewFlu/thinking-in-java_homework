@@ -2,7 +2,7 @@ package chapters.forteen.typeinfo.interfaceviolation.innerimplementation;
 
 import chapters.forteen.typeinfo.interfaceviolation.A;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class InnerA {
     private static class C implements A {

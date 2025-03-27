@@ -1,6 +1,6 @@
 package chapters.seven.inheritance.reusing;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class OverridingPrivate2 extends OverridingPrivate{
 

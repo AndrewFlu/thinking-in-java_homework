@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.time.LocalTime;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class DynamicProxyHandler implements InvocationHandler {
     private Object proxied;

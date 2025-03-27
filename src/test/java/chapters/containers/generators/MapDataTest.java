@@ -3,7 +3,7 @@ package chapters.containers.generators;
 import chapters.sixteen.arrays.generators.CountingGenerator;
 import chapters.sixteen.arrays.generators.RandomGenerator;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class MapDataTest {
     public static void main(String[] args) {

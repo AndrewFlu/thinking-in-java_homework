@@ -3,7 +3,7 @@ package chapters.forteen.typeinfo.reflection.classInfo;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ClassInfo {
     private static String usage = "Usage:\n" +

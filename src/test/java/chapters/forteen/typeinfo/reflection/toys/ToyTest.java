@@ -3,7 +3,7 @@ package chapters.forteen.typeinfo.reflection.toys;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ToyTest {
     static void printInfo(Class cc) {

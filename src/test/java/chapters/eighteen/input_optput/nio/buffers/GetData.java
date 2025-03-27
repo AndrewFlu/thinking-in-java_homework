@@ -2,7 +2,7 @@ package chapters.eighteen.input_optput.nio.buffers;
 
 import java.nio.ByteBuffer;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class GetData {
     private static final int BSIZE = 1024;

@@ -1,6 +1,6 @@
 package chapters.fifteen.generics.instantiate.withoutconstraint;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class InstantiateGenericType {
     public static void main(String[] args) {

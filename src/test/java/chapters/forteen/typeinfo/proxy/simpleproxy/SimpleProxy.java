@@ -1,11 +1,8 @@
 package chapters.forteen.typeinfo.proxy.simpleproxy;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Date;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SimpleProxy implements Interface {
     private Interface proxied;

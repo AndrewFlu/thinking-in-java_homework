@@ -7,7 +7,7 @@ import net.mindview.utils.Generator;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ArraySearching {
     public static void main(String[] args) {

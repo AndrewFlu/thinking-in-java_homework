@@ -5,9 +5,8 @@ import chapters.sixteen.arrays.generators.BerylliumSphereGenerator;
 import chapters.sixteen.arrays.generators.Generated;
 
 import java.util.Arrays;
-import java.util.Collections;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class BerylliumSphereSorting {
     public static void main(String[] args) {

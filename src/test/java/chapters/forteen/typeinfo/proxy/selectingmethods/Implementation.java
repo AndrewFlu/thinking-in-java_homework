@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.proxy.selectingmethods;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Implementation implements SomeMethods {
     @Override

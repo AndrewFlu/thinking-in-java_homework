@@ -3,7 +3,7 @@ package chapters.six;
 import chapters.six.packageprivate.DieselEngine;
 import chapters.six.packageprivate.Engine;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class EngineTestDrive {
     public static void main(String[] args) {

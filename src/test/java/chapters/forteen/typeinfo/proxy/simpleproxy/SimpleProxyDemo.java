@@ -1,6 +1,6 @@
 package chapters.forteen.typeinfo.proxy.simpleproxy;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SimpleProxyDemo {
     public static void consumer(Interface iFace) {

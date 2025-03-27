@@ -1,6 +1,6 @@
 package chapters.four;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class TernaryBitwiseOperations {
     public static final int LOW = 0b0101_0101_0101_0101_0101_0101_0101_0101;

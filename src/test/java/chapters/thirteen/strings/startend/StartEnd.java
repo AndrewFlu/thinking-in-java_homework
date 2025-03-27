@@ -5,7 +5,7 @@ import chapters.thirteen.strings.groups.Groups;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class StartEnd {
 //    public static String input = "As long as there is injustice, whenever a\n" +

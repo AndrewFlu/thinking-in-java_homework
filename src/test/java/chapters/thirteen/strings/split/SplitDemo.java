@@ -2,7 +2,7 @@ package chapters.thirteen.strings.split;
 
 import java.util.Arrays;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class SplitDemo {
     public static void main(String[] args) {

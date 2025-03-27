@@ -1,6 +1,6 @@
 package chapters.seven.reusing;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class Beetle extends Insect {
     private int k = printInit("Поле Beetle.k инициализировано");

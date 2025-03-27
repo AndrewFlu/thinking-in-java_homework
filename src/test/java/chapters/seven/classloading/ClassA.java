@@ -1,6 +1,6 @@
 package chapters.seven.classloading;
 
-import static net.midview.Print.print;
+import static net.mindview.utils.Print.print;
 
 public class ClassA {
     static String onlyOneInitialization;
