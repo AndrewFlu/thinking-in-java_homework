@@ -8,12 +8,6 @@ import java.util.List;
 
 public class StoreCADState {
     public static void main(String[] args) throws IOException {
-        List<Class<? extends Shape>> shapeTypes = new ArrayList<>();
-        // Добавляем ссылки на объекты Class:
-        shapeTypes.add(Circle.class);
-        shapeTypes.add(Square.class);
-        shapeTypes.add(Line.class);
-
         List<Shape> shapes = new ArrayList<>();
         // создаём несколько фигур:
         for (int i = 0; i < 10; i++)
@@ -23,8 +17,11 @@ public class StoreCADState {
             shapes.get(i).setColor(Shape.GREEN);
         // сохраняем вектор состояния
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("CADState.out"));
-        out.writeObject(shapeTypes);
+        // записываем статические поля
+        Circle.serializeStaticState(out);
         Line.serializeStaticState(out);
+        Square.serializeStaticState(out);
+        // записываем объекты
         out.writeObject(shapes);
         // отображение набора фигур:
         System.out.println(shapes);
