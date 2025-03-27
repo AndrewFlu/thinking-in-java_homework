@@ -3,13 +3,16 @@
     <Person>
         <first>Juran</first>
         <last>The Beardyman</last>
+        <address>Yo City, Gagarina 15</address>
     </Person>
     <Person>
         <first>Zhenya</first>
         <last>The Designer</last>
+        <address>Yo City, Petrova 22</address>
     </Person>
     <Person>
         <first>Yana</first>
         <last>The Zhopka</last>
+        <address>Yo City, Solovjeva 22</address>
     </Person>
 </people>

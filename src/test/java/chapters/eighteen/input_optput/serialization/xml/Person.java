@@ -11,22 +11,27 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Person {
-    private String first, last;
+    private String first, last, address;
 
-    public Person(String first, String last) {
+    public Person(String first, String last, String address) {
         this.first = first;
         this.last = last;
+        this.address = address;
+
     }
 
     // Создание объекта XML по объекту Person:
     public Element getXml() {
         Element person = new Element("Person");
-        Element firstName = new Element("first");
-        firstName.appendChild(first);
-        Element lastName = new Element("last");
-        lastName.appendChild(last);
-        person.appendChild(firstName);
-        person.appendChild(lastName);
+        Element firstNameElement = new Element("first");
+        firstNameElement.appendChild(first);
+        Element lastNameElement = new Element("last");
+        lastNameElement.appendChild(last);
+        Element addressElement = new Element("address");
+        addressElement.appendChild(address);
+        person.appendChild(firstNameElement);
+        person.appendChild(lastNameElement);
+        person.appendChild(addressElement);
 
         return person;
     }
@@ -35,10 +40,11 @@ public class Person {
     public Person(Element person) {
         first = person.getFirstChildElement("first").getValue();
         last = person.getFirstChildElement("last").getValue();
+        address = person.getFirstChildElement("address").getValue();
     }
 
     public String toString() {
-        return first + " " + last;
+        return first + " " + last + ", address: " + address;
     }
 
     // Преобразование в удобочитаемую форму:
@@ -52,9 +58,9 @@ public class Person {
 
     public static void main(String[] args) throws Exception {
         List<Person> people = Arrays.asList(
-                new Person("Juran", "The Beardyman"),
-                new Person("Zhenya", "The Designer"),
-                new Person("Yana", "The Zhopka")
+                new Person("Juran", "The Beardyman", "Yo City, Gagarina 15"),
+                new Person("Zhenya", "The Designer", "Yo City, Petrova 22"),
+                new Person("Yana", "The Zhopka", "Yo City, Solovjeva 22")
         );
         System.out.println(people);
         Element root  = new Element("people");
