@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<people>
+    <Person>
+        <first>Juran</first>
+        <last>The Beardyman</last>
+    </Person>
+    <Person>
+        <first>Zhenya</first>
+        <last>The Designer</last>
+    </Person>
+    <Person>
+        <first>Yana</first>
+        <last>The Zhopka</last>
+    </Person>
+</people>
