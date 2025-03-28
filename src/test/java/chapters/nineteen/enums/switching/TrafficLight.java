@@ -1,13 +1,15 @@
 package chapters.nineteen.enums.switching;
 
+import static chapters.nineteen.enums.switching.Signal.*;
+
 public class TrafficLight {
-    Signal color = Signal.RED;
+    Signal color = RED;
     public void change() {
         switch (color) {
             // в секции case не обязательно использовать запись Signal.RED:
-            case RED -> color = Signal.GREEN;
-            case GREEN -> color = Signal.YELLOW;
-            case  YELLOW -> color = Signal.RED;
+            case RED -> color = GREEN;
+            case GREEN -> color = YELLOW;
+            case  YELLOW -> color = RED;
         }
     }
 
