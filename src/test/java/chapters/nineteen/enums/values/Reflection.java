@@ -1,0 +1,39 @@
+package chapters.nineteen.enums.values;
+
+import chapters.eighteen.input_optput.manageprocesses.OSExecute;
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Type;
+import java.util.Set;
+import java.util.TreeSet;
+
+import static net.mindview.utils.Print.print;
+
+public class Reflection {
+    public static Set<String> analyze(Class<?> enumClass) {
+        print("------ Analyzing " + enumClass + " --------");
+        print("Interfaces:");
+        for (Type t : enumClass.getGenericInterfaces())
+            print(t);
+        print("Base: " + enumClass.getSuperclass());
+        print("Methods:");
+        Set<String> methods = new TreeSet<>();
+        for (Method m : enumClass.getMethods())
+            methods.add(m.getName());
+        print(methods);
+
+        return methods;
+    }
+
+    public static void main(String[] args) {
+        Set<String> exploreMethods = analyze(Explore.class);
+        Set<String> enumMethods = analyze(Enum.class);
+
+        System.out.println("ExploreMethods.containsAll(EnumMethods)? " + exploreMethods.containsAll(enumMethods));
+        System.out.print("Explore.removeAll(Enum)");
+        exploreMethods.removeAll(enumMethods);
+        print(exploreMethods);
+        // Decompile the code for the enum:
+        OSExecute.command("Javap src/test/java/chapters/nineteen/enums/values/Explore.class");
+    }
+}
