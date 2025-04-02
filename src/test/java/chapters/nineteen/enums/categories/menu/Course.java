@@ -6,6 +6,7 @@ public enum Course {
     APPETIZER(Food.Appetizer.class),
     MAINCOURSE(Food.MainCourse.class),
     DESSERT(Food.Coffee.class),
+    FRUITS(Food.Fruit.class),
     COFFEE(Food.Coffee.class);
 
     private Food[] values;

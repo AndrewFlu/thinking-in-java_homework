@@ -1,6 +1,7 @@
 package chapters.nineteen.enums.categories.menu;
 
 public interface Food {
+
     enum Appetizer implements Food {
         SALAD, SOUP, SPRING_ROLLS
     }
@@ -16,6 +17,10 @@ public interface Food {
 
     enum Coffee implements Food {
         BLACK_COFFEE, DECAF_COFFEE, ESPRESSO, LATTE, CAPPUCCINO, TEA, HERB_TEA
+    }
+
+    enum Fruit implements Food {
+        BANANA, ORANGE, APPLE, TANGERINE
     }
 
 }
