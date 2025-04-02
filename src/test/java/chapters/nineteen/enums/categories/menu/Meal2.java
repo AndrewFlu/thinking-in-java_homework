@@ -7,6 +7,7 @@ public enum Meal2 {
     MAINCOURSE(Food.MainCourse.class),
     DESSERT(Food.Desert.class),
     COFFEE(Food.Coffee.class),
+    FRUITS(Food.Fruits.class),
     ;
 
     private Food[] values;
@@ -23,6 +24,8 @@ public enum Meal2 {
         enum Desert implements Food {TIRAMISU, GElATO, BLACK_FOREST_CAKE, FRUIT, CREME_CARAMEL}
 
         enum Coffee implements Food {BLACK_COFFEE, DECAF_COFFEE, ESPRESSO, LATTE, CAPPUCCINO, TEA, HERB_TEA}
+
+        enum Fruits implements Food {ORANGE, APPLE, TANGERINE, BANANA, PEAR}
     }
 
     public Food randomSelection() {
