@@ -11,12 +11,14 @@ public class Mail {
     enum Readability{ILLEGIBLE, YES1, YES2, YES3, YES4}
     enum Address {INCORRECT, OK1, OK2, OK3, OK4, OK5, OK6}
     enum ReturnAddress{MISSING, OK1, OK2, OK3, OK4, OK5}
+    enum ForwardAddress {MISSING, OK1, OK2, OK3, OK4, OK5}
 
     GeneralDelivery generalDelivery;
     Scannability scannability;
     Readability readability;
     Address address;
     ReturnAddress returnAddress;
+    ForwardAddress forwardAddress;
 
     static long counter = 0;
     long id = counter++;
@@ -31,7 +33,9 @@ public class Mail {
                 ", Address Scannability: " + scannability +
                 ", Address Readability: " + readability +
                 ", Address Address: " + address +
-                ", Return address: " + returnAddress;
+                ", Return address: " + returnAddress +
+                ", Forward address: " + forwardAddress
+        ;
     }
 
     // Generate test Mail:
@@ -42,6 +46,7 @@ public class Mail {
         m.readability = Enums.random(Readability.class);
         m.address = Enums.random(Address.class);
         m.returnAddress = Enums.random(ReturnAddress.class);
+        m.forwardAddress = Enums.random(ForwardAddress.class);
 
         return m;
     }
