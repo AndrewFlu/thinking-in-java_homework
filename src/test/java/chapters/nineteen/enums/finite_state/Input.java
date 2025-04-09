@@ -33,7 +33,7 @@ public enum Input {
 
     Input() {}
 
-    int amount() {
+    public int amount() {
         return value;
     }
 
