@@ -1,9 +1,6 @@
 package chapters.twenty.annotations.database.db_processor;
 
-import chapters.twenty.annotations.database.Constraints;
-import chapters.twenty.annotations.database.DBTable;
-import chapters.twenty.annotations.database.SQLInteger;
-import chapters.twenty.annotations.database.SQLString;
+import chapters.twenty.annotations.database.*;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -34,6 +31,7 @@ public class TableCreator {
 
                 if (anns.length < 1)
                     continue; // Не является столбцом таблицы базы данных
+
                 if (anns[0] instanceof SQLInteger) {
                     SQLInteger sInt = (SQLInteger) anns[0];
                     // Использовать имя поля, если имя не указано
@@ -53,6 +51,28 @@ public class TableCreator {
                         columnName = sString.name();
                     columnDefs.add(columnName + " VARCHAR(" + sString.value() + ")" + getConstraints(sString.constraints()));
                 }
+
+                 if (anns[0] instanceof SQLBoolean) {
+                     SQLBoolean aBoolean = (SQLBoolean) anns[0];
+                     // Использовать имя поля, если имя не указано
+                     if (aBoolean.name().length() < 1)
+                         columnName = field.getName().toUpperCase();
+                     else {
+                         columnName = aBoolean.name();
+                     }
+                     columnDefs.add(columnName + " BOOLEAN" + getConstraints(aBoolean.constraints()));
+                 }
+
+                 if (anns[0] instanceof SQLCharacter) {
+                     SQLCharacter aCharacter = (SQLCharacter) anns[0];
+                     // Использовать имя поля, если имя не указано
+                     if (aCharacter.name().length() < 1)
+                         columnName = field.getName().toUpperCase();
+                     else {
+                         columnName = aCharacter.name();
+                     }
+                     columnDefs.add(columnName + " VARCHAR(" + aCharacter.value()  + getConstraints(aCharacter.constraints()) + ")");
+                 }
 
                 StringBuilder createCommand = new StringBuilder("CREATE TABLE " + tableName + "(");
                 for (String columnDef : columnDefs)
