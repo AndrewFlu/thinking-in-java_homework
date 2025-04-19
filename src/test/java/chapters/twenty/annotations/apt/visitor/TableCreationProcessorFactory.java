@@ -1,9 +1,6 @@
 package chapters.twenty.annotations.apt.visitor;
 
-import chapters.twenty.annotations.database.Constraints;
-import chapters.twenty.annotations.database.DBTable;
-import chapters.twenty.annotations.database.SQLInteger;
-import chapters.twenty.annotations.database.SQLString;
+import chapters.twenty.annotations.database.*;
 import com.sun.mirror.apt.AnnotationProcessor;
 import com.sun.mirror.apt.AnnotationProcessorEnvironment;
 import com.sun.mirror.apt.AnnotationProcessorFactory;
@@ -34,7 +31,9 @@ public class TableCreationProcessorFactory implements AnnotationProcessorFactory
                 "annotations.database.DBTable",
                 "annotations.database.Constraints",
                 "annotations.database.SQLString",
-                "annotations.database.SQLInteger"
+                "annotations.database.SQLInteger",
+                "annotations.database.SQLBoolean",
+                "annotations.database.SQLCharacter"
         );
     }
 
@@ -82,15 +81,31 @@ public class TableCreationProcessorFactory implements AnnotationProcessorFactory
                     else
                         columnName = sIng.name();
                     sql += "\n    " + columnName + " INT" + getConstraints(sIng.constraints()) + ",";
-                    if (d.getAnnotation(SQLString.class) != null) {
-                        SQLString sString = d.getAnnotation(SQLString.class);
-                        // Использовать имя поля, если имя не задано
-                        if (sIng.name().length() < 1)
-                            columnName = d.getSimpleName().toUpperCase();
-                        else
-                            columnName = sString.name();
-                        sql += "\n    " + columnName + " VARCHAR(" + sString.value() + ")" + getConstraints(sString.constraints()) + ",";
-                    }
+                }
+                if (d.getAnnotation(SQLString.class) != null) {
+                    SQLString sString = d.getAnnotation(SQLString.class);
+                    // Использовать имя поля, если имя не задано
+                    if (sString.name().length() < 1)
+                        columnName = d.getSimpleName().toUpperCase();
+                    else
+                        columnName = sString.name();
+                    sql += "\n    " + columnName + " VARCHAR(" + sString.value() + ")" + getConstraints(sString.constraints()) + ",";
+                }
+                if (d.getAnnotation(SQLBoolean.class) != null) {
+                    SQLBoolean sBoolean = d.getAnnotation(SQLBoolean.class);
+                    if (sBoolean.name().length() < 1)
+                        columnName = d.getSimpleName().toUpperCase();
+                    else
+                        columnName = sBoolean.name();
+                    sql += "\n    " + columnName + " BOOLEAN(" + getConstraints(sBoolean.constraints()) + ",";
+                }
+                if (d.getAnnotation(SQLCharacter.class) != null) {
+                    SQLCharacter sCharacter = d.getAnnotation(SQLCharacter.class);
+                    if (sCharacter.name().length() < 1)
+                        columnName = d.getSimpleName().toUpperCase();
+                    else
+                        columnName = sCharacter.name();
+                    sql += "\n    " + columnName + " VARCHAR(" + getConstraints(sCharacter.constraints()) + ",";
                 }
             }
 
