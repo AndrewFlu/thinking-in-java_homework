@@ -1,7 +1,6 @@
 package chapters.eighteen.input_optput.manageprocesses;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class OSExecute {
