@@ -3,12 +3,12 @@ package chapters.twenty.annotations.atunit;
 import chapters.eighteen.input_optput.manageprocesses.OSExecute;
 import chapters.twenty.annotations.base_syntax.Test;
 
-public class AtUnitExample4 {
+public class Task4 {
     public static int count = 0;
 
     public int id = count++;
 
-    public AtUnitExample4() {
+    public Task4() {
         System.out.println("Constructing AtUnitExample4 with id = " + id);
     }
 
