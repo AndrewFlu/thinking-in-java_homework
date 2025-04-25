@@ -2,6 +2,9 @@ package chapters.twenty.annotations.atunit;
 
 import chapters.eighteen.input_optput.manageprocesses.OSExecute;
 import chapters.twenty.annotations.base_syntax.Test;
+import net.mindview.atunit.TestObjectCleanup;
+import net.mindview.atunit.TestObjectCreate;
+import net.mindview.atunit.TestProperty;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,13 +20,13 @@ public class AtUnitExample5 {
         return text;
     }
 
-//    @TestProperty
+    @TestProperty
     static PrintWriter output;
 
-//    @TestProperty
+    @TestProperty
     static int counter;
 
-//    @TestObjectCreate
+    @TestObjectCreate
     static AtUnitExample5 create() {
         String id = Integer.toString(counter++);
         try {
@@ -34,7 +37,7 @@ public class AtUnitExample5 {
         return new AtUnitExample5(id);
     }
 
-//    @TestObjectCleanup
+    @TestObjectCleanup
     static void cleanUp(AtUnitExample5 topj) {
         System.out.println("Running cleanup");
         output.close();
