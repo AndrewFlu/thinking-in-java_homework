@@ -65,6 +65,8 @@ public class AtUnit implements ProcessFiles.Strategy {
         }
         for (Method m : testMethods) {
             System.out.print(" . " + m.getName() + " ");
+            if (m.isAnnotationPresent(TestNote.class))
+                print("Note: " + m.getAnnotation(TestNote.class).note()); // print note
             try {
                 Object testObject = createTestObject(creator);
                 boolean success = false;
