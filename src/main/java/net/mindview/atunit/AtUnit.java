@@ -45,7 +45,7 @@ public class AtUnit implements ProcessFiles.Strategy {
         Method creator = null;
         Method cleanup = null;
         for (Method m : testClass.getDeclaredMethods()) {
-            testMethods.addIfTestMethod(m);
+            testMethods.addTestMethod(m);
             if (creator == null)
                 creator = checkForCreatorMethod(m);
             if (cleanup == null)
