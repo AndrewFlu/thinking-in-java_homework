@@ -1,7 +1,5 @@
 package chapters.twenty.annotations.apt;
 
-import com.sun.xml.internal.rngom.ast.builder.Div;
-
 @ExtractInterface("IDivider")
 public class Divider {
     public int divide(int x, int y) {
