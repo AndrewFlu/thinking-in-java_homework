@@ -1,11 +1,11 @@
-package chapters.twenty_one.concurrency.thread.task_2;
+package chapters.twenty_one.concurrency.tasks.task_2;
 
 import static net.mindview.utils.Print.print;
 
-public class FibonacciA implements Runnable {
+public class FibonacciB implements Runnable {
     private int n = 0;
 
-    public FibonacciA(int n) {
+    public FibonacciB(int n) {
         this.n = n;
     }
 
@@ -18,8 +18,7 @@ public class FibonacciA implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < n; i++) {
-            print("A " + fib(i) + " ");
+            print("B " + fib(i) + " ");
         }
-
     }
 }

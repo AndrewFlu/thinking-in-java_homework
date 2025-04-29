@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.thread.task_2;
+package chapters.twenty_one.concurrency.tasks.task_2;
 
 public class FibonacciTestDrive {
     public static void main(String[] args) {
