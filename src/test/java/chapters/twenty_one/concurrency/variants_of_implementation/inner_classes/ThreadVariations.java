@@ -6,5 +6,6 @@ public class ThreadVariations {
         new InnerThread2("InnerThread2");
 
         new InnerRunnable1("InnerRunnable1");
+        new InnerRunnable2("InnerRunnable2");
     }
 }
