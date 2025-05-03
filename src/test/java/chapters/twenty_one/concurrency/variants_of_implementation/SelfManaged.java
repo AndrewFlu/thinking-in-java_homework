@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency;
+package chapters.twenty_one.concurrency.variants_of_implementation;
 
 public class SelfManaged implements Runnable {
     private int countdown = 5;
