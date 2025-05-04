@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.tasks.task_10;
+package chapters.twenty_one.concurrency.tasks.task_1;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
