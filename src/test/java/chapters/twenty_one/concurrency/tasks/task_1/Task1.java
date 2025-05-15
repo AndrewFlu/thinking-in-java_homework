@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.tasks;
+package chapters.twenty_one.concurrency.tasks.task_1;
 
 public class Task1 implements Runnable {
     private static int counter = 0;
