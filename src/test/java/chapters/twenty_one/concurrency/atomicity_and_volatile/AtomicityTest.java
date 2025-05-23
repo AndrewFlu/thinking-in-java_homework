@@ -7,7 +7,7 @@ public class AtomicityTest implements Runnable {
 
     private int i = 0;
 
-    private int getValue() { // must bew synchronized!
+    private synchronized int getValue() { // must bew synchronized!
         return i;
     }
 
