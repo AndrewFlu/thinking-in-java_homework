@@ -1,6 +1,6 @@
 package chapters.twenty_one.concurrency.crytical_section;
 
-class Pair { // Потоково-небезопасный класс
+public class Pair { // Потоково-небезопасный класс
     private int x, y;
 
     public Pair(int x, int y) {

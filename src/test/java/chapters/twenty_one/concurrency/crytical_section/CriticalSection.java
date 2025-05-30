@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CriticalSection {
     // Тестирование двух разных подхходов
-    static void testApproaches(PairManager pm1, PairManager pm2) {
+    public static void testApproaches(PairManager pm1, PairManager pm2) {
         ExecutorService executorService = Executors.newCachedThreadPool();
         PairManipulator
                 pairManipulator1 = new PairManipulator(pm1),

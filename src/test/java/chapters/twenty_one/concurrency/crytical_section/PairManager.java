@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 // Защита Pair в потоково-безопасном классе
-abstract class PairManager {
+public abstract class PairManager {
     AtomicInteger checkCounter = new AtomicInteger(0);
     protected Pair p = new Pair();
     private final List<Pair> storage = Collections.synchronizedList(new ArrayList<>());
@@ -18,7 +18,7 @@ abstract class PairManager {
     }
 
     // Предполагается, что эта операция занимает много времени
-    protected void store(Pair p) {
+    protected synchronized void store(Pair p) {
         storage.add(p);
         try {
             TimeUnit.MILLISECONDS.sleep(50);
