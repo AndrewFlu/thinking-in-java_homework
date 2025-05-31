@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.synch_on_other_object;
+package chapters.twenty_one.concurrency.synchronization.synch_on_other_object;
 
 class DualSynch {
     private Object synchObject = new Object();

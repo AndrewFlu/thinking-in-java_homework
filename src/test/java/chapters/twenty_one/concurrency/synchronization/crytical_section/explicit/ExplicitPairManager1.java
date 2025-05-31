@@ -1,6 +1,6 @@
-package chapters.twenty_one.concurrency.crytical_section.explicit;
+package chapters.twenty_one.concurrency.synchronization.crytical_section.explicit;
 
-import chapters.twenty_one.concurrency.crytical_section.PairManager;
+import chapters.twenty_one.concurrency.synchronization.crytical_section.PairManager;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

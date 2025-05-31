@@ -1,7 +1,7 @@
-package chapters.twenty_one.concurrency.crytical_section.explicit;
+package chapters.twenty_one.concurrency.synchronization.crytical_section.explicit;
 
-import chapters.twenty_one.concurrency.crytical_section.CriticalSection;
-import chapters.twenty_one.concurrency.crytical_section.PairManager;
+import chapters.twenty_one.concurrency.synchronization.crytical_section.PairManager;
+import chapters.twenty_one.concurrency.synchronization.crytical_section.CriticalSection;
 
 public class ExplicitCriticalSection {
     public static void main(String[] args) {
