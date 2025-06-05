@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import static net.mindview.utils.Print.print;
 
-class SleepBlocked implements Runnable {
+public class SleepBlocked implements Runnable {
 
     @Override
     public void run() {

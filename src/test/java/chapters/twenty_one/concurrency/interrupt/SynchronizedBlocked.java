@@ -2,7 +2,7 @@ package chapters.twenty_one.concurrency.interrupt;
 
 import static net.mindview.utils.Print.print;
 
-class SynchronizedBlocked implements Runnable {
+public class SynchronizedBlocked implements Runnable {
     public synchronized void f() {
         while (true) // блокировка никогда не снимается
             Thread.yield();

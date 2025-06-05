@@ -5,7 +5,7 @@ import java.io.InputStream;
 
 import static net.mindview.utils.Print.print;
 
-class IOBlocked implements Runnable {
+public class IOBlocked implements Runnable {
 
     private InputStream in;
 
