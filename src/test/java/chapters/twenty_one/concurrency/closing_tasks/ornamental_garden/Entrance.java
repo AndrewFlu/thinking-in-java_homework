@@ -36,6 +36,7 @@ public class Entrance implements Runnable {
                 TimeUnit.MILLISECONDS.sleep(100);
             } catch (InterruptedException e) {
                 System.out.println("sleep() interrupted");
+                break;
             }
         }
         System.out.println("Останавливаем подсчёт... " + this);
