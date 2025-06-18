@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.producer_consumer.blockingqueues;
+package chapters.twenty_one.concurrency.blockingqueues;
 
 import chapters.twenty_one.concurrency.runnable.LiftOff;
 
