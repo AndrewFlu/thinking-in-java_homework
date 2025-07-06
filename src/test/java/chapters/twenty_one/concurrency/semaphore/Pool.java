@@ -24,11 +24,13 @@ public class Pool<T> {
             }
     }
 
+    // захватывает блокировку по объекту и отдаёт его
     public T checkOut() throws InterruptedException {
         available.acquire();
         return getItem();
     }
 
+    // освобождает блокировку по объекту
     public void checkIn(T x) {
         if (releaseItem(x))
             available.release();
