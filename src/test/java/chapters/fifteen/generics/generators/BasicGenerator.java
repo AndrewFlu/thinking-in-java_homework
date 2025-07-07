@@ -20,7 +20,7 @@ public class BasicGenerator<T> implements Generator<T> {
     }
 
     // создание генератора по умолчанию для заданного типа
-//    public static <T> Generator<T> create(Class<T> type) {
-//        return new BasicGenerator<>(type);
-//    }
+    public static <T> Generator<T> create(Class<T> type) {
+        return new BasicGenerator<>(type);
+    }
 }
