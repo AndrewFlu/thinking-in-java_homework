@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.modelling;
+package chapters.twenty_one.concurrency.modelling.bank;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

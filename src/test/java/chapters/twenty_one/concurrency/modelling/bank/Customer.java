@@ -1,4 +1,4 @@
-package chapters.twenty_one.concurrency.modelling;
+package chapters.twenty_one.concurrency.modelling.bank;
 
 // Объекты, только для чтения, не требуют синхронизации
 class Customer {
