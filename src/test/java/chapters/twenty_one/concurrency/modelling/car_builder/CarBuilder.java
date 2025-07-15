@@ -10,8 +10,15 @@ public class CarBuilder {
                 chassisQueue = new CarQueue(),
                 finishingQueue = new CarQueue();
         ExecutorService exec = Executors.newCachedThreadPool();
+        RobotPool robotPool = new RobotPool();
 
+        exec.execute(new EngineRobot(robotPool));
+        exec.execute(new DriveTrainRobot(robotPool));
+        exec.execute(new WheelRobot(robotPool));
 
+        exec.execute(new Assembler(chassisQueue, finishingQueue, robotPool));
+
+        exec.execute(new Reporter(finishingQueue));
         // Создание кузовов приводит конвейер в движение
         exec.execute(new ChassisBuilder(chassisQueue));
         TimeUnit.SECONDS.sleep(7);
