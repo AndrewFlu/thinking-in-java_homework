@@ -13,7 +13,9 @@ public class CarBuilder {
         RobotPool robotPool = new RobotPool();
 
         exec.execute(new EngineRobot(robotPool));
+        exec.execute(new ExhaustRobot(robotPool));
         exec.execute(new DriveTrainRobot(robotPool));
+        exec.execute(new MudguardsRobot(robotPool));
         exec.execute(new WheelRobot(robotPool));
 
         exec.execute(new Assembler(chassisQueue, finishingQueue, robotPool));
@@ -21,7 +23,7 @@ public class CarBuilder {
         exec.execute(new Reporter(finishingQueue));
         // Создание кузовов приводит конвейер в движение
         exec.execute(new ChassisBuilder(chassisQueue));
-        TimeUnit.SECONDS.sleep(7);
+        TimeUnit.SECONDS.sleep(5);
         exec.shutdownNow();
     }
 }

@@ -5,6 +5,8 @@ class Car {
     private boolean
             engine = false,
             driveTrain = false,
+            exhaust = false,
+            mudguards = false,
             wheels = false;
 
     public Car(int id) {
@@ -32,12 +34,22 @@ class Car {
         wheels = true;
     }
 
+    public synchronized void addExhaust() {
+        exhaust = true;
+    }
+
+    public synchronized void addMudguards() {
+        mudguards = true;
+    }
+
     @Override
     public synchronized String toString() {
-        return "Car " + id +
-                " [" + "engine: " + engine +
-                ", driveTrain: " + driveTrain +
-                ", wheels: " + wheels +
+        return "Car " + id + " [" +
+                "engine: " + engine + ", " +
+                "driveTrain: " + driveTrain + ", " +
+                "exhaust: " + exhaust + ", " +
+                "mudguards: " + mudguards + ", " +
+                "wheels: " + wheels +
                 "]";
     }
 }

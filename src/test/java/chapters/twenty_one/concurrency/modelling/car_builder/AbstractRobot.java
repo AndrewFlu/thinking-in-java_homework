@@ -6,7 +6,6 @@ abstract class AbstractRobot implements Runnable {
     private RobotPool pool;
     private boolean engage = false;
 
-
     protected Assembler assembler;
 
     public AbstractRobot(RobotPool pool) {

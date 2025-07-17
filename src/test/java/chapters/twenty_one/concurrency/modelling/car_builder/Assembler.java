@@ -5,9 +5,11 @@ import java.util.concurrent.CyclicBarrier;
 
 class Assembler implements Runnable {
 
+    public static final int ROBOT_COUNT = 5;
+    private static final int MAIN_THREAD_COUNT = 1;
     private CarQueue chassisQueue, finishingQueue;
     private Car car;
-    private CyclicBarrier barrier = new CyclicBarrier(4); // todo: почему 4?
+    private CyclicBarrier barrier = new CyclicBarrier(ROBOT_COUNT + MAIN_THREAD_COUNT); // количество задействованных роботов в работе + 1 поток (выполнения main)
     private RobotPool robotPool;
 
     public Assembler(CarQueue chassisQueue, CarQueue finishingQueue, RobotPool robotPool) {
@@ -34,6 +36,8 @@ class Assembler implements Runnable {
                 // Привелечение роботов для выполнения работы:
                 robotPool.hire(EngineRobot.class, this);
                 robotPool.hire(DriveTrainRobot.class, this);
+                robotPool.hire(ExhaustRobot.class, this);
+                robotPool.hire(MudguardsRobot.class, this);
                 robotPool.hire(WheelRobot.class, this);
 
                 barrier.await(); // пока роботы не закончат работу
