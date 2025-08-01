@@ -1,4 +1,4 @@
-package chapters.gui.tasks.taks_4;
+package chapters.gui.tasks.task_4;
 
 import chapters.gui.swing.utils.SwingConsole;
 
