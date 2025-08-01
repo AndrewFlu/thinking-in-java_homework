@@ -17,6 +17,6 @@ public class Button1 extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingConsole.run(new Button1(), 200, 100);
+        SwingConsole.run(new Button1(), 500, 700);
     }
 }
