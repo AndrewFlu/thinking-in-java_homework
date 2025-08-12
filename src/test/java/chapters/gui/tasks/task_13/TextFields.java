@@ -44,7 +44,7 @@ public class TextFields extends JFrame {
     }
 
     private class UpperCaseDocument extends PlainDocument {
-        private boolean upperCase = true;
+        private boolean upperCase = false;
 
         public void setUpperCase(boolean flag) {
             upperCase = flag;
