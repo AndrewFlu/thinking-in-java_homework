@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Выполнение продлжительных задач в потоках
+ * Выполнение продолжительных задач в потоках
  */
 public class InterruptableLongRunningTask extends JFrame {
 
@@ -36,7 +36,6 @@ public class InterruptableLongRunningTask extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 exec.shutdownNow(); // Силовое решение
-                exec = Executors.newSingleThreadExecutor();
             }
         });
         setLayout(new FlowLayout());
