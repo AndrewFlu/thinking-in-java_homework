@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Выполнение продлжительных задач в потоках
@@ -39,7 +38,8 @@ public class InterruptableLongRunningTask extends JFrame {
                 exec.shutdownNow(); // Силовое решение
                 exec = Executors.newSingleThreadExecutor();
             }
-        });setLayout(new FlowLayout());
+        });
+        setLayout(new FlowLayout());
         add(b1);
         add(b2);
     }
@@ -48,25 +48,4 @@ public class InterruptableLongRunningTask extends JFrame {
         SwingConsole.run(new InterruptableLongRunningTask(), 550, 250);
     }
 
-    private class Task implements Runnable {
-        private static int counter = 0;
-        private final int id = counter++;
-
-        @Override
-        public void run() {
-            System.out.println(this + " started");
-            try {
-                TimeUnit.SECONDS.sleep(3);
-            } catch (InterruptedException e) {
-                System.out.println(this + " interrupted");
-                return;
-            }
-            System.out.println(this + " completed");
-        }
-
-        @Override
-        public String toString() {
-            return "Task " + id;
-        }
-    }
 }
