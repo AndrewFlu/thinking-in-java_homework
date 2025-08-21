@@ -39,7 +39,7 @@ public class TaskManager<R, C extends Callable<R>> extends ArrayList<TaskManager
             TaskItem<R, C> item = items.next();
             // Сохранить завершённые задачи для вывода информации о результатах
             if (!item.future.isDone()) {
-                results.add("Cancelling " + item.task);
+                results.add("Cancelling: " + item.task);
                 item.future.cancel(true); // Возможно прерывание
                 items.remove();
             }
