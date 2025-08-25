@@ -1,7 +1,6 @@
 package chapters.gui.swing.components;
 
 import chapters.gui.swing.utils.SwingConsole;
-import com.sun.codemodel.internal.fmt.JTextFile;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
