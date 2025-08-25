@@ -8,10 +8,11 @@ public class SWTConsole {
         Display display = new Display();
         Shell shell = new Shell(display);
         shell.setText(swtApp.getClass().getSimpleName());
+        shell.setSize(width, height);
 
         swtApp.createContents(shell);
 
-        shell.setSize(width, height);
+        // should open after content's construction
         shell.open();
 
         while (!shell.isDisposed())
